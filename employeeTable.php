@@ -50,8 +50,28 @@ class EmployeeTable extends Connection{
                 $weekly_hours = $row['WEEKLY_HOURS'];
                 $hourly_rate = $row['HOURLY_RATE'];
                 $baddress = $row['BADDRESS'];
-                $eachEmployee = new employee($fname, $middle_init, $lname, $ird_number, $contact_number,$weekly_hours,$hourly_rate,$baddress);
+                $eachEmployee = new Employee($fname, $middle_init, $lname, $ird_number, $contact_number,$weekly_hours,$hourly_rate,$baddress);
                 array_push(self::$table, $eachEmployee);
+            }
+        }
+    }
+
+    public function getEmployeeByIRD($ird) {
+        if ($this->testConnection()) {
+            $this->stid = oci_parse(self::$conn, "select * from employee WHERE ird_number='{$ird}'");
+            $result = oci_execute($this->stid);
+
+            while ($row = oci_fetch_array($this->stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
+                $fname = $row['FNAME'];
+                $middle_init = $row['MIDDLE_INIT'];
+                $lname = $row['LNAME'];
+                $ird_number = $row['IRD_NUMBER'];
+                $contact_number = $row['CONTACT_NUMBER'];
+                $weekly_hours = $row['WEEKLY_HOURS'];
+                $hourly_rate = $row['HOURLY_RATE'];
+                $baddress = $row['BADDRESS'];
+                $theEmployee = new Employee($fname, $middle_init, $lname, $ird_number, $contact_number, $weekly_hours, $hourly_rate, $baddress);
+                return $theEmployee;
             }
         }
     }
@@ -63,7 +83,7 @@ class EmployeeTable extends Connection{
         $result = oci_execute($this->stid);
 
         if ($result && count(self::$bookstores) != 0) {
-            $newEmployee = new employee($fname, $middle_init, $lname, $contact_number,$weekly_hours,$hourly_rate, $baddress);
+            $newEmployee = new Employee($fname, $middle_init, $lname, $contact_number,$weekly_hours,$hourly_rate, $baddress);
             array_push(self::$table, $newEmployee);
             return $this;
         }
@@ -81,7 +101,7 @@ class EmployeeTable extends Connection{
 
 
 
-class employee extends EmployeeTable
+class Employee extends EmployeeTable
 {
 //fname    VARCHAR2(15) NOT NULL,
 //middle_init    CHAR,
@@ -92,14 +112,14 @@ class employee extends EmployeeTable
 //hourly_rate    NUMBER(5) NOT NULL, /*Currency*/
 //baddress
 
-    private $fname;
-    private $middle_init;
-    private $lanme;
-    private $ird_number;
-    private $contact_number;
-    private $weekly_hours;
-    private $hourly_rate;
-    private $baddress;
+    public $fname;
+    public $middle_init;
+    public $lanme;
+    public $ird_number;
+    public $contact_number;
+    public $weekly_hours;
+    public $hourly_rate;
+    public $baddress;
 
     private $stid = null;
 
