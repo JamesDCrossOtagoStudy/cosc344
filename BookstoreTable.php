@@ -156,9 +156,7 @@ class SingleBookstore extends BookstoreTable
     }
 }
 
-$testBooktable = new BookstoreTable();
-$testBooktable->getAllBookStores();
-printf($testBooktable);
+
 
 
 

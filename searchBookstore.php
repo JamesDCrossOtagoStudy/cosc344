@@ -8,7 +8,7 @@
 require_once('BookstoreTable.php');
 $bookstoreTable = new BookstoreTable();
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET'){
+if ($_SERVER['REQUEST_METHOD'] == 'GET'){
     $bookstoreTable->getAllBookStores();
     printf($bookstoreTable);
 }
