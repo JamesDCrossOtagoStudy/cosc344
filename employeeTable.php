@@ -126,8 +126,14 @@ class employee extends EmployeeTable
         $str .= '<td>' . ($this->middle_init !== null ? htmlentities($this->middle_init, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->lanme !== null ? htmlentities($this->lanme, ENT_QUOTES) : '&nbsp') . '</td>';
 
-        
-        $str .= '<td>' . ($this->ird_number !== null ? htmlentities($this->ird_number, ENT_QUOTES) : '&nbsp') . '</td>';
+        if ($this->ird_number !== null) {
+            $tmp = htmlentities($this->ird_number, ENT_QUOTES);
+        } else {
+            $tmp = '&nbsp';
+        }
+        $str .= '<td>' . "<a href=editEmployee.php?ird=$tmp>" . $tmp . "</a>" . '</td>';
+
+//        $str .= '<td>' . ($this->ird_number !== null ? htmlentities($this->ird_number, ENT_QUOTES) : '&nbsp') . '</td>';
 
 
         $str .= '<td>' . ($this->contact_number !== null ? htmlentities($this->contact_number, ENT_QUOTES) : '&nbsp') . '</td>';

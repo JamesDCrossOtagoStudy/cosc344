@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/employee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/editEmployee.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/employee.php" afterPath="$PROJECT_DIR$/employeeRecords.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookstoreTable.php" afterPath="$PROJECT_DIR$/BookstoreTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Connection.php" afterPath="$PROJECT_DIR$/Connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EmployeeTable.php" afterPath="$PROJECT_DIR$/EmployeeTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/searchBookstore.php" afterPath="$PROJECT_DIR$/searchBookstore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="cosc344.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,26 +51,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeTable.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeTable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EmployeeTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="128" column="8" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
+            <state relative-caret-position="428">
+              <caret line="133" column="88" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="88" />
               <folding>
-                <marker date="1474258083000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
-                <marker date="1474258083000" expanded="true" signature="1998:2133" ph="insert into employee... " />
-                <marker date="1474258083000" expanded="true" signature="3786:3807" ph="..." />
-                <marker date="1474258083000" expanded="true" signature="5328:5434" ph="update emplo... " />
+                <marker date="1474260864000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
+                <marker date="1474260864000" expanded="true" signature="1998:2133" ph="insert into employee... " />
+                <marker date="1474260864000" expanded="true" signature="3786:3807" ph="..." />
+                <marker date="1474260864000" expanded="true" signature="5572:5678" ph="update emplo... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employee.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/employee.php">
+      <file leaf-file-name="editEmployee.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/editEmployee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="15" />
+            <state relative-caret-position="159">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="e#6#83#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insertBookstore.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insertBookstore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employeeRecords.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employeeRecords.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -105,6 +125,7 @@
         <option value="$PROJECT_DIR$/searchBookstore.php" />
         <option value="$PROJECT_DIR$/employee.php" />
         <option value="$PROJECT_DIR$/EmployeeTable.php" />
+        <option value="$PROJECT_DIR$/editEmployee.php" />
       </list>
     </option>
   </component>
@@ -289,12 +310,12 @@
       <updated>1474248163146</updated>
       <workItem from="1474248164328" duration="256000" />
       <workItem from="1474248604125" duration="19000" />
-      <workItem from="1474249924647" duration="6911000" />
+      <workItem from="1474249924647" duration="10139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7186000" />
+    <option name="totallyTimeSpent" value="10414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -302,7 +323,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21459228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -440,6 +461,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/employeeRecords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insertBookstore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/searchBookstore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -448,23 +485,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/employee.php">
+    <entry file="file://$PROJECT_DIR$/EmployeeTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="428">
+          <caret line="133" column="88" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="88" />
+          <folding>
+            <marker date="1474260864000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
+            <marker date="1474260864000" expanded="true" signature="1998:2133" ph="insert into employee... " />
+            <marker date="1474260864000" expanded="true" signature="3786:3807" ph="..." />
+            <marker date="1474260864000" expanded="true" signature="5572:5678" ph="update emplo... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmployeeTable.php">
+    <entry file="file://$PROJECT_DIR$/editEmployee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="128" column="8" selection-start-line="128" selection-start-column="8" selection-end-line="128" selection-end-column="8" />
+        <state relative-caret-position="159">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
-            <marker date="1474258083000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
-            <marker date="1474258083000" expanded="true" signature="1998:2133" ph="insert into employee... " />
-            <marker date="1474258083000" expanded="true" signature="3786:3807" ph="..." />
-            <marker date="1474258083000" expanded="true" signature="5328:5434" ph="update emplo... " />
+            <element signature="e#6#83#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
