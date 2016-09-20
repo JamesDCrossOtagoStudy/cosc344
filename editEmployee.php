@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             $result = oci_execute($stid);
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                                 $address = $row['ADDRESS'];
-                                echo "<option value=" . $address .">" . $row['ADDRESS'] . "</option>";
+                                echo "<option value=" . "34 45" .">" . $row['ADDRESS'] . "</option>";
                             }
                             oci_free_statement($stid);
                         }
