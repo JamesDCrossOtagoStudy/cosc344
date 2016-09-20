@@ -52,8 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 ?>
 
-
-
 <select name="weekly_hours" id="weekly_hours">
     <option value="">Select Weekly Hours</option>
     <?php

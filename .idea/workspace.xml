@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxData.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editEmployee.php" afterPath="$PROJECT_DIR$/editEmployee.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/employeeRecords.php" afterPath="$PROJECT_DIR$/employeeRecords.php" />
     </list>
     <ignored path="cosc344.iws" />
@@ -29,33 +25,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="editEmployee.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editEmployee.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/editEmployee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employeeRecords.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/employeeRecords.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+            <state relative-caret-position="311">
+              <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
               <folding>
-                <marker date="1474330457000" expanded="true" signature="2094:2142" ph="select disti... employee_wage" />
+                <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
+                <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajaxData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <marker date="1474330138000" expanded="true" signature="356:423" ph="select disti... employee_wage" />
               </folding>
@@ -94,10 +81,10 @@
         <option value="$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.html" />
         <option value="$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.php" />
         <option value="$PROJECT_DIR$/tmp/test.html" />
-        <option value="$PROJECT_DIR$/editEmployee.php" />
         <option value="$PROJECT_DIR$/ajax_getValue.php" />
         <option value="$PROJECT_DIR$/ajaxData.php" />
         <option value="$PROJECT_DIR$/employeeRecords.php" />
+        <option value="$PROJECT_DIR$/editEmployee.php" />
       </list>
     </option>
   </component>
@@ -114,9 +101,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="616" />
     <option name="y" value="23" />
-    <option name="width" value="1278" />
+    <option name="width" value="1440" />
     <option name="height" value="813" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -288,18 +274,18 @@
       <workItem from="1474249924647" duration="10176000" />
       <workItem from="1474275238195" duration="10926000" />
       <workItem from="1474318698445" duration="1423000" />
-      <workItem from="1474325046564" duration="3962000" />
+      <workItem from="1474325046564" duration="6292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26762000" />
+    <option name="totallyTimeSpent" value="29092000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="616" y="23" width="1278" height="813" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22031474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22031474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -339,7 +325,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
+            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -362,7 +351,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474330457000" expanded="true" signature="2094:2142" ph="select disti... employee_wage" />
+            <element signature="e#861#1555#0#HTML" expanded="false" />
+            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -389,7 +379,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
+            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -412,7 +405,8 @@
         <state relative-caret-position="285">
           <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
-            <marker date="1474330457000" expanded="true" signature="2094:2142" ph="select disti... employee_wage" />
+            <element signature="e#861#1555#0#HTML" expanded="false" />
+            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -490,7 +484,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
+            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -506,7 +503,8 @@
         <state relative-caret-position="255">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding>
-            <marker date="1474330457000" expanded="true" signature="2094:2142" ph="select disti... employee_wage" />
+            <element signature="e#861#1555#0#HTML" expanded="false" />
+            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -617,14 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/editEmployee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -643,22 +633,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/employeeRecords.php">
+    <entry file="file://$PROJECT_DIR$/ajaxData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+        <state relative-caret-position="240">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
-            <marker date="1474330457000" expanded="true" signature="2094:2142" ph="select disti... employee_wage" />
+            <marker date="1474330138000" expanded="true" signature="356:423" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajaxData.php">
+    <entry file="file://$PROJECT_DIR$/employeeRecords.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="810">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding>
-            <marker date="1474330138000" expanded="true" signature="356:423" ph="select disti... employee_wage" />
+            <element signature="e#861#1555#0#HTML" expanded="false" />
+            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editEmployee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+          <folding>
+            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
+            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
           </folding>
         </state>
       </provider>
