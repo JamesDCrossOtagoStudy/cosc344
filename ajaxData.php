@@ -8,6 +8,7 @@
 require_once ('Connection.php');
 $connection = new Connection();
 
+// generate data from selection of hourly_rate
 if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hours'])) {
     // get hourly rate based on selected weekly_hours
     $conn = $connection->getConnection();
@@ -25,5 +26,6 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
     oci_free_statement($stid);
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'GET')
 
 

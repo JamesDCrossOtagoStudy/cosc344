@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/formValidation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxData.php" afterPath="$PROJECT_DIR$/ajaxData.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editEmployee.php" afterPath="$PROJECT_DIR$/editEmployee.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/employeeRecords.php" afterPath="$PROJECT_DIR$/employeeRecords.php" />
     </list>
@@ -28,11 +31,11 @@
       <file leaf-file-name="editEmployee.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/editEmployee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+            <state relative-caret-position="506">
+              <caret line="127" column="57" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="57" />
               <folding>
-                <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
-                <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+                <marker date="1474360231000" expanded="true" signature="3592:3640" ph="select disti... employee_wage" />
+                <marker date="1474360231000" expanded="true" signature="4952:4991" ph="select disti... bookstore" />
               </folding>
             </state>
           </provider>
@@ -41,11 +44,80 @@
       <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajaxData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="420">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding>
-                <marker date="1474330138000" expanded="true" signature="356:423" ph="select disti... employee_wage" />
+                <marker date="1474359929000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EmployeeTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1595">
+              <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+              <folding>
+                <element signature="e#7405#7465#0#PHP" expanded="false" />
+                <marker date="1474344842000" expanded="true" signature="1079:1101" ph="select * fro... employee" />
+                <marker date="1474344842000" expanded="true" signature="1999:2047" ph="select * fro... employee" />
+                <marker date="1474344842000" expanded="true" signature="2953:3025" ph="insert into employee... " />
+                <marker date="1474344842000" expanded="true" signature="2953:3105" ph="insert into employee... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4034" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4043" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4068" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4086" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4087" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4102" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4116" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4158" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4176" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4192" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4208" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4223" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4238" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4250" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4262" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4305" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4323" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="4007:4327" ph="update emplo... " />
+                <marker date="1474344842000" expanded="true" signature="5829:5850" ph="..." />
+                <marker date="1474344842000" expanded="true" signature="7493:7599" ph="update emplo... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employeeRecords.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/employeeRecords.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+              <folding>
+                <element signature="e#1348#1384#0#PHP" expanded="true" />
+                <marker date="1474345772000" expanded="true" signature="1540:1588" ph="select disti... employee_wage" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchBookstore.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searchBookstore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insertBookstore.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insertBookstore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,6 +128,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,13 +150,14 @@
         <option value="$PROJECT_DIR$/searchBookstore.php" />
         <option value="$PROJECT_DIR$/employee.php" />
         <option value="$PROJECT_DIR$/tmp.html" />
-        <option value="$PROJECT_DIR$/EmployeeTable.php" />
         <option value="$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.html" />
         <option value="$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.php" />
         <option value="$PROJECT_DIR$/tmp/test.html" />
         <option value="$PROJECT_DIR$/ajax_getValue.php" />
-        <option value="$PROJECT_DIR$/ajaxData.php" />
+        <option value="$PROJECT_DIR$/EmployeeTable.php" />
         <option value="$PROJECT_DIR$/employeeRecords.php" />
+        <option value="$PROJECT_DIR$/js/formValidation.js" />
+        <option value="$PROJECT_DIR$/ajaxData.php" />
         <option value="$PROJECT_DIR$/editEmployee.php" />
       </list>
     </option>
@@ -101,6 +175,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP5.6" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="13" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
@@ -193,6 +268,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cosc344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cosc344" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -274,15 +363,15 @@
       <workItem from="1474249924647" duration="10176000" />
       <workItem from="1474275238195" duration="10926000" />
       <workItem from="1474318698445" duration="1423000" />
-      <workItem from="1474325046564" duration="6292000" />
+      <workItem from="1474325046564" duration="21451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29092000" />
+    <option name="totallyTimeSpent" value="44251000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
+    <frame x="13" y="23" width="1440" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22031474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -326,8 +415,8 @@
         <state relative-caret-position="60">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
-            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
-            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+            <marker date="1474360231000" expanded="true" signature="3592:3640" ph="select disti... employee_wage" />
+            <marker date="1474360231000" expanded="true" signature="4952:4991" ph="select disti... bookstore" />
           </folding>
         </state>
       </provider>
@@ -337,11 +426,31 @@
         <state relative-caret-position="495">
           <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding>
-            <marker date="1474281559000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="1985:2033" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="2926:3061" ph="insert into employee... " />
-            <marker date="1474281559000" expanded="true" signature="4706:4727" ph="..." />
-            <marker date="1474281559000" expanded="true" signature="6492:6598" ph="update emplo... " />
+            <element signature="e#7405#7465#0#PHP" expanded="false" />
+            <marker date="1474344842000" expanded="true" signature="1079:1101" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="1999:2047" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="2953:3025" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="2953:3105" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4034" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4043" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4068" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4086" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4087" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4102" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4116" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4158" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4176" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4192" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4208" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4223" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4238" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4250" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4262" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4305" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4323" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4327" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="5829:5850" ph="..." />
+            <marker date="1474344842000" expanded="true" signature="7493:7599" ph="update emplo... " />
           </folding>
         </state>
       </provider>
@@ -351,8 +460,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#861#1555#0#HTML" expanded="false" />
-            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
+            <element signature="e#1348#1384#0#PHP" expanded="true" />
+            <marker date="1474345772000" expanded="true" signature="1540:1588" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -380,8 +489,8 @@
         <state relative-caret-position="60">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
-            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
-            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+            <marker date="1474360231000" expanded="true" signature="3592:3640" ph="select disti... employee_wage" />
+            <marker date="1474360231000" expanded="true" signature="4952:4991" ph="select disti... bookstore" />
           </folding>
         </state>
       </provider>
@@ -391,11 +500,31 @@
         <state relative-caret-position="495">
           <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding>
-            <marker date="1474281559000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="1985:2033" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="2926:3061" ph="insert into employee... " />
-            <marker date="1474281559000" expanded="true" signature="4706:4727" ph="..." />
-            <marker date="1474281559000" expanded="true" signature="6492:6598" ph="update emplo... " />
+            <element signature="e#7405#7465#0#PHP" expanded="false" />
+            <marker date="1474344842000" expanded="true" signature="1079:1101" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="1999:2047" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="2953:3025" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="2953:3105" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4034" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4043" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4068" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4086" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4087" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4102" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4116" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4158" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4176" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4192" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4208" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4223" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4238" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4250" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4262" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4305" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4323" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4327" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="5829:5850" ph="..." />
+            <marker date="1474344842000" expanded="true" signature="7493:7599" ph="update emplo... " />
           </folding>
         </state>
       </provider>
@@ -405,8 +534,8 @@
         <state relative-caret-position="285">
           <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
-            <element signature="e#861#1555#0#HTML" expanded="false" />
-            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
+            <element signature="e#1348#1384#0#PHP" expanded="true" />
+            <marker date="1474345772000" expanded="true" signature="1540:1588" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -434,7 +563,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474330138000" expanded="true" signature="356:423" ph="select disti... employee_wage" />
+            <marker date="1474359929000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -471,11 +600,31 @@
         <state relative-caret-position="1995">
           <caret line="133" column="88" selection-start-line="133" selection-start-column="7" selection-end-line="133" selection-end-column="88" />
           <folding>
-            <marker date="1474281559000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="1985:2033" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="2926:3061" ph="insert into employee... " />
-            <marker date="1474281559000" expanded="true" signature="4706:4727" ph="..." />
-            <marker date="1474281559000" expanded="true" signature="6492:6598" ph="update emplo... " />
+            <element signature="e#7405#7465#0#PHP" expanded="false" />
+            <marker date="1474344842000" expanded="true" signature="1079:1101" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="1999:2047" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="2953:3025" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="2953:3105" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4034" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4043" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4068" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4086" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4087" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4102" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4116" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4158" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4176" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4192" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4208" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4223" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4238" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4250" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4262" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4305" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4323" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4327" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="5829:5850" ph="..." />
+            <marker date="1474344842000" expanded="true" signature="7493:7599" ph="update emplo... " />
           </folding>
         </state>
       </provider>
@@ -485,8 +634,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
-            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+            <marker date="1474360231000" expanded="true" signature="3592:3640" ph="select disti... employee_wage" />
+            <marker date="1474360231000" expanded="true" signature="4952:4991" ph="select disti... bookstore" />
           </folding>
         </state>
       </provider>
@@ -503,8 +652,8 @@
         <state relative-caret-position="255">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding>
-            <element signature="e#861#1555#0#HTML" expanded="false" />
-            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
+            <element signature="e#1348#1384#0#PHP" expanded="true" />
+            <marker date="1474345772000" expanded="true" signature="1540:1588" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -542,46 +691,6 @@
     <entry file="file://$PROJECT_DIR$/employee/getEmployeeTable.php" />
     <entry file="file://$PROJECT_DIR$/emloyee.html" />
     <entry file="file://$PROJECT_DIR$/getEmployee.php" />
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insertBookstore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searchBookstore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BookstoreTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="86" selection-end-column="5" />
-          <folding>
-            <marker date="1474256275000" expanded="true" signature="1188:1211" ph="select * fro... bookstore" />
-            <marker date="1474256275000" expanded="true" signature="1960:2054" ph="insert into bookstore... " />
-            <marker date="1474256275000" expanded="true" signature="4238:4317" ph="update books... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmp/tmp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -601,20 +710,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tmp/test.html" />
-    <entry file="file://$PROJECT_DIR$/EmployeeTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-          <folding>
-            <marker date="1474281559000" expanded="true" signature="1065:1087" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="1985:2033" ph="select * fro... employee" />
-            <marker date="1474281559000" expanded="true" signature="2926:3061" ph="insert into employee... " />
-            <marker date="1474281559000" expanded="true" signature="4706:4727" ph="..." />
-            <marker date="1474281559000" expanded="true" signature="6492:6598" ph="update emplo... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmp/ajax_query_example_from_lecture.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -633,34 +728,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajaxData.php">
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookstoreTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding>
-            <marker date="1474330138000" expanded="true" signature="356:423" ph="select disti... employee_wage" />
+            <marker date="1474256275000" expanded="true" signature="1188:1211" ph="select * fro... bookstore" />
+            <marker date="1474256275000" expanded="true" signature="1960:2054" ph="insert into bookstore... " />
+            <marker date="1474256275000" expanded="true" signature="4238:4317" ph="update books... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmployeeTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1595">
+          <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+          <folding>
+            <element signature="e#7405#7465#0#PHP" expanded="false" />
+            <marker date="1474344842000" expanded="true" signature="1079:1101" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="1999:2047" ph="select * fro... employee" />
+            <marker date="1474344842000" expanded="true" signature="2953:3025" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="2953:3105" ph="insert into employee... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4034" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4043" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4068" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4086" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4087" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4102" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4116" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4158" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4176" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4192" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4208" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4223" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4238" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4250" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4262" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4305" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4323" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="4007:4327" ph="update emplo... " />
+            <marker date="1474344842000" expanded="true" signature="5829:5850" ph="..." />
+            <marker date="1474344842000" expanded="true" signature="7493:7599" ph="update emplo... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/employeeRecords.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="570">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
           <folding>
-            <element signature="e#861#1555#0#HTML" expanded="false" />
-            <marker date="1474333194000" expanded="true" signature="2092:2140" ph="select disti... employee_wage" />
+            <element signature="e#1348#1384#0#PHP" expanded="true" />
+            <marker date="1474345772000" expanded="true" signature="1540:1588" ph="select disti... employee_wage" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchBookstore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/formValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc;n#isEmpty#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insertBookstore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajaxData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <marker date="1474359929000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_code.jquery.com_jquery-2.0.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="3900" column="4" selection-start-line="3900" selection-start-column="4" selection-end-line="3900" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/editEmployee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+        <state relative-caret-position="506">
+          <caret line="127" column="57" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="57" />
           <folding>
-            <marker date="1474334163000" expanded="true" signature="2656:2704" ph="select disti... employee_wage" />
-            <marker date="1474334163000" expanded="true" signature="3773:3812" ph="select disti... bookstore" />
+            <marker date="1474360231000" expanded="true" signature="3592:3640" ph="select disti... employee_wage" />
+            <marker date="1474360231000" expanded="true" signature="4952:4991" ph="select disti... bookstore" />
           </folding>
         </state>
       </provider>
