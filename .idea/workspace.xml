@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/formValidation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxData.php" afterPath="$PROJECT_DIR$/ajaxData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editEmployee.php" afterPath="$PROJECT_DIR$/editEmployee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/employeeRecords.php" afterPath="$PROJECT_DIR$/employeeRecords.php" />
     </list>
     <ignored path="cosc344.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +27,8 @@
       <file leaf-file-name="editEmployee.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/editEmployee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="127" column="57" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="57" />
+            <state relative-caret-position="221">
+              <caret line="113" column="54" selection-start-line="113" selection-start-column="54" selection-end-line="113" selection-end-column="54" />
               <folding>
                 <marker date="1474360231000" expanded="true" signature="3592:3640" ph="select disti... employee_wage" />
                 <marker date="1474360231000" expanded="true" signature="4952:4991" ph="select disti... bookstore" />
@@ -44,10 +40,10 @@
       <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajaxData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+            <state relative-caret-position="450">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
-                <marker date="1474359929000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+                <marker date="1474360285000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
               </folding>
             </state>
           </provider>
@@ -157,8 +153,8 @@
         <option value="$PROJECT_DIR$/EmployeeTable.php" />
         <option value="$PROJECT_DIR$/employeeRecords.php" />
         <option value="$PROJECT_DIR$/js/formValidation.js" />
-        <option value="$PROJECT_DIR$/ajaxData.php" />
         <option value="$PROJECT_DIR$/editEmployee.php" />
+        <option value="$PROJECT_DIR$/ajaxData.php" />
       </list>
     </option>
   </component>
@@ -363,12 +359,12 @@
       <workItem from="1474249924647" duration="10176000" />
       <workItem from="1474275238195" duration="10926000" />
       <workItem from="1474318698445" duration="1423000" />
-      <workItem from="1474325046564" duration="21451000" />
+      <workItem from="1474325046564" duration="21530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44251000" />
+    <option name="totallyTimeSpent" value="44330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="23" width="1440" height="813" extended-state="0" />
@@ -563,7 +559,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474359929000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+            <marker date="1474360285000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
           </folding>
         </state>
       </provider>
@@ -827,16 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajaxData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding>
-            <marker date="1474359929000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_code.jquery.com_jquery-2.0.0.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -845,10 +831,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ajaxData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1474360285000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/editEmployee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="127" column="57" selection-start-line="127" selection-start-column="57" selection-end-line="127" selection-end-column="57" />
+        <state relative-caret-position="221">
+          <caret line="113" column="54" selection-start-line="113" selection-start-column="54" selection-end-line="113" selection-end-column="54" />
           <folding>
             <marker date="1474360231000" expanded="true" signature="3592:3640" ph="select disti... employee_wage" />
             <marker date="1474360231000" expanded="true" signature="4952:4991" ph="select disti... bookstore" />
