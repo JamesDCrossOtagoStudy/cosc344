@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function makeRequest(id)
+        {
+            httpRequest = new XMLHttpRequest();
+
+            <!-- edit the url to reflect the path to your associated php file -->
+            <!--  - which should be located somewhere below the top-level directory -->
+            <!--  /devel/USERNAME/projects where USERNAME is your system login name -->
+
+            httpRequest.open('GET', 'http://titanium.otago.ac.nz:8080/~USERNAME/ajax_query.php?id=' + id);
+            httpRequest.onreadystatechange = function()
+            {
+                if (httpRequest.readyState == 4) {       // The request is complete
+                    alert(httpRequest.responseText);       // Display the result
+                }
+            }
+            httpRequest.send(null);
+        }
+    </script>
+</head>
+
+<body>
+<h1>Location Lookup</h2>
+    <div id="descriptionNode">This page finds products at a location</div>
+
+    <form name="LocForm" method="post">
+        Enter Employee ID:
+        <input type="text" value="Stafford" name="id">
+        <input type="button" value="Submit" onclick="makeRequest(LocForm.id.value);">
+    </form>
+
+</body>
+</html>
