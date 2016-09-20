@@ -45,19 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         });
 
         $('#editEmployeeForm').submit(function () {
-            if (isEmpty($('#ird').value) || isEmpty($('#baddress').value) || isEmpty($('#weekly_hours').value
-                || isEmpty($('#hourly_rate').value))){
-                return false;
-            } else {
-                alert("the value of baddress is:"+$('#baddress').val()+"_");
-                alert("the value of ird is:"+$('#ird').val()+"_");
-            }
+            alert("ird_number: "+$('#ird').val()+"\n"+
+                "weekly_hours: "+$('#weekly_hours').val()+"\n"+
+                    "hourly_rate: "+$('#hourly_rate').val()+"\n"+
+                    "baddress: "+$('#baddress').val()
+            );
+            return false;
         });
-
-        $(document).on('change', function () {
-            alert($('#baddress').value);
-        })
-
     });
 </script>
 
@@ -89,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <p>
                     <label>Weekly Hours</label>
                     <select name="weekly_hours" id="weekly_hours">
-                        <option value=""><?php echo $theEmployee->weekly_hours; ?></option>
+                        <option value=<?php echo $theEmployee->weekly_hours; ?>><?php echo $theEmployee->weekly_hours; ?></option>
                         <?php
                         // for employee wage selection
                         $connection = new Connection();
@@ -101,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             $result = oci_execute($stid);
                             if ($result) {
                                 while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
-                                    echo "<option value={$row['WEEKLY_HOURS']}>" . $row['WEEKLY_HOURS'] . "</option>";
+                                    echo "<option value='{$row['WEEKLY_HOURS']}'>" . $row['WEEKLY_HOURS'] . "</option>";
                                 }
                             }
                             oci_free_statement($stid);
@@ -112,13 +106,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <p>
                     <label>Hourly Rate</label>
                     <select name="hourly_rate" id="hourly_rate">
-                        <option value=""><?php echo $theEmployee->hourly_rate; ?></option>
+                        <option value=<?php echo $theEmployee->hourly_rate; ?>><?php echo $theEmployee->hourly_rate; ?></option>
                     </select>
                 </p>
                 <p>
                     <label>Bookstore Address</label>
                     <select name="baddress" id="baddress">
-                        <option value=""><?php echo $theEmployee->baddress; ?></option>
+                        <option value="<?php echo $theEmployee->baddress; ?>"><?php echo $theEmployee->baddress; ?></option>
                         <?php
                         if ($connection->testConnection()) {
                             $conn = $connection->getConnection();
@@ -127,7 +121,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
                             $result = oci_execute($stid);
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
-                                echo "<option value={$row['ADDRESS']}>" . $row['ADDRESS'] . "</option>";
+                                $address = $row['ADDRESS'];
+                                echo "<option value=" . $address .">" . $row['ADDRESS'] . "</option>";
                             }
                             oci_free_statement($stid);
                         }

@@ -18,7 +18,8 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
     $result = oci_execute($stid);
     if ($result) {
         while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-            echo "<option value={$row['HOURLY_RATE']}>" . $row['HOURLY_RATE'] . "</option>";
+            $hourly_rate = $row['HOURLY_RATE'];
+           echo "<option value=" . $hourly_rate .">" . $row['HOURLY_RATE'] . "</option>";
         }
     } else {
         echo '<option value="">No Hourly Rate available</option>';
