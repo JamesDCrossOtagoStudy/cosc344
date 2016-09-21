@@ -17,6 +17,9 @@
                $.ajax('employeeForm.php', {
                    success: function (html) {
                        $('#insertionForm').html(html);
+                       $('#ird').prop('disabled', false);
+                       $('#submit').val('Add');
+                       $('#go_back_home').prop('disable', true).hide();
                    }
                });
             });
@@ -40,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     </div>
 </div>
 <p>
-    <a href="index.html">Go back to home page</a>
+    <a href="index.html" id="go_back_home">Go back to home page</a>
 </p>
 </body>
 </html>

@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 </p>
                 <p>
                     <label>IRD Number</label>
-                    <input type="text" name="ird_number" id="ird" value="<?php echo $ird_number; ?>"disabled>
+                    <input type="text" name="ird_number" id="ird" value="<?php echo $ird_number; ?>" disabled >
                 </p>
                 <p>
                     <label>Contact Number</label>
@@ -148,18 +148,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     </select>
                 </p>
                 <p>
-                    <input type="submit" value="save">
+                    <input type="submit" value="Save" id="submit" name="submit">
                 </p>
             </form>
         </div>
         <?php
     } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $newEmployee = new Employee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_SESSION['id']
-        ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
+
 
         $table = new EmployeeTable();
-        $table->updateEmployee($newEmployee, $_SESSION['id']);
-        session_destroy();
+        $dom = new DOMDocument();
+        if ($_POST['submit'] == "Save") {
+            $newEmployee = new Employee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_SESSION['id']
+                ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
+            $table->updateEmployee($newEmployee, $_SESSION['id']);
+            session_destroy();
+        } elseif ($_POST['submit'] == "Add") {
+            $table->insertEmployee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_POST['id']
+                ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
+        }
+
 //        header('Location: '.'http://localhost/cosc344/employeeRecords.php');
     }
 ?>
