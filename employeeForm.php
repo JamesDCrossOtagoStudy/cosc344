@@ -9,18 +9,22 @@ require_once ('EmployeeTable.php');
 if(!isset($_SESSION['id'])){
     session_start();
 }
+$theEmployee = null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $id = null;
-    $ird = $_GET['ird'];
-    $_SESSION['id'] = $ird;
-    $theEmployee = null;
-    if ($ird != null) {
-        $table = new EmployeeTable();
-        $table->update();
-        $theEmployee = $table->getEmployeeByIRD($ird);
+    if (!isset($_GET['addNewEmployee'])) {
+        $ird = $_GET['ird'];
+        $_SESSION['id'] = $ird;
 
+        if ($ird != null) {
+            $table = new EmployeeTable();
+            $table->update();
+            $theEmployee = $table->getEmployeeByIRD($ird);
+
+        }
     }
+    
     $fname = $theEmployee == null ? "" : $theEmployee->fname;
     $middle_name = $theEmployee == null ? "" : $theEmployee->middle_init;
     $lname = $theEmployee == null ? "" : $theEmployee->lname;

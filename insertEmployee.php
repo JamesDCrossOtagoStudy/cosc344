@@ -15,6 +15,7 @@
         $(document).ready(function () {
             $('#add').on('click', function () {
                $.ajax('employeeForm.php', {
+                   data: "addNewEmployee=1",
                    success: function (html) {
                        $('#insertionForm').html(html);
                        $('#ird').prop('disabled', false);
