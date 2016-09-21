@@ -3,8 +3,7 @@ require_once('BookstoreTable.php');
 ?>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         $( function() {
             $( "#datepicker" ).datepicker({
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         <input type="submit">
     </pre></form>
     <p>
-        <a href="home.html">home</a>
+        <a href="index.html">home</a>
     </p>
     <?php
 } else {
@@ -38,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $total_salary = $_POST["total_salary"];
 
     $bookstoreTable->insertBookstore($city, $address, $account, $date_opened, $total_salary);
-    header('Location: '.'http://titanium.otago.ac.nz:8080/wzhao/projects/home.html');
+    header('Location: '.'http://titanium.otago.ac.nz:8080/wzhao/projects/index.html');
 }
 
 

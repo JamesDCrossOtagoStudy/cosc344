@@ -44,16 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     }
                 });
             } else {
-                $('#hourly_rate').html('<option value="">Select Hourly Rate</option>')
+                $('#hourly_rate').html('<option value="">Select Hourly Rate</option>');
             }
-        });
-
-        $('#editEmployeeForm').submit(function () {
-            alert("ird_number: "+$('#ird').val()+"\n"+
-                "weekly_hours: "+$('#weekly_hours').val()+"\n"+
-                    "hourly_rate: "+$('#hourly_rate').val()+"\n"+
-                    "baddress: "+$('#baddress').val()
-            );
         });
     });
 </script>
@@ -65,23 +57,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             <form action="editEmployee.php" method="post" id="editEmployeeForm">
                 <p>
                     <label>First Name</label>
-                    <input type="text" name="fname" id="fname" value="<?php echo $theEmployee->fname; ?>"
+                    <input type="text" name="fname" id="fname" value="<?php echo $theEmployee->fname; ?>">
                 </p>
                 <p>
                     <label>Middle Name</label>
-                    <input type="text" name="middle" id="middle" value="<?php echo $theEmployee->middle_init; ?>"
+                    <input type="text" name="middle" id="middle" value="<?php echo $theEmployee->middle_init; ?>">
                 </p>
                 <p>
                     <label>Last Name</label>
-                    <input type="text" name="lname" id="lname" value="<?php echo $theEmployee->lname; ?>"
+                    <input type="text" name="lname" id="lname" value="<?php echo $theEmployee->lname; ?>">
                 </p>
                 <p>
                     <label>IRD Number</label>
-                    <input type="text" name="ird_number" id="ird" value="<?php echo $theEmployee->ird_number; ?>"
+                    <input type="text" name="ird_number" id="ird" value="<?php echo $theEmployee->ird_number; ?>"disabled>
                 </p>
                 <p>
                     <label>Contact Number</label>
-                    <input type="text" name="contact_number" id="contact" value="<?php echo $theEmployee->contact_number; ?>"
+                    <input type="text" name="contact_number" id="contact" value="<?php echo $theEmployee->contact_number; ?>">
                 </p>
                 <p>
                     <label>Weekly Hours</label>
@@ -141,13 +133,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $newEmployee = new Employee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_POST['ird_number']
         ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
-        echo "<p>" . $_SESSION['id'] . "</p>";
-        echo "<p>" . "hello" . "</p>";
 
         $table = new EmployeeTable();
         $table->updateEmployee($newEmployee, $_SESSION['id']);
-        header('Location: '.'http://localhost/cosc344/employeeRecords.php');
         session_destroy();
+//        header('Location: '.'http://localhost/cosc344/employeeRecords.php');
     }
 ?>
 

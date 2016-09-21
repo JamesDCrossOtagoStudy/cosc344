@@ -105,8 +105,7 @@ class EmployeeTable extends Connection{
         $updateString = "update employee set FNAME='{$fname}', MIDDLE_INIT='{$middle}', LNAME='{$lname}', IRD_NUMBER = '{$ird_number}',
                         CONTACT_NUMBER='{$contact_number}', WEEKLY_HOURS='{$weekly_hours}', HOURLY_RATE='{$hourly_rate}', BADDRESS='{$baddress}'
                         where ird_number='{$old_ird_number}'";
-
-        echo "update string is {$updateString}";
+        echo "update string is:\n {$updateString}";
         $this->stid = oci_parse(self::$conn, $updateString);
         
         $result = oci_execute($this->stid);
