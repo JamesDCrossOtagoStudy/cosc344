@@ -6,11 +6,15 @@
  * Time: 4:49 PM
  */
 require_once ('EmployeeTable.php');
-
+if(!isset($_SESSION['id'])){
+    session_start();
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $id = null;
     $ird = $_GET['ird'];
-    $GLOBALS['id'] = $ird;
+    $_SESSION['id'] = $ird;
+    echo "<p>" . $id . "</p>";
     if ($ird != null) {
         $table = new EmployeeTable();
         $table->update();
@@ -50,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     "hourly_rate: "+$('#hourly_rate').val()+"\n"+
                     "baddress: "+$('#baddress').val()
             );
-            return false;
         });
     });
 </script>
@@ -122,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             $result = oci_execute($stid);
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                                 $address = $row['ADDRESS'];
-                                echo "<option value=" . "34 45" .">" . $row['ADDRESS'] . "</option>";
+                                echo "<option value='" . $address . "'>" . $address ."</option>";
                             }
                             oci_free_statement($stid);
                         }
@@ -138,10 +141,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $newEmployee = new Employee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_POST['ird_number']
         ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
+        echo "<p>" . $_SESSION['id'] . "</p>";
+        echo "<p>" . "hello" . "</p>";
 
         $table = new EmployeeTable();
-        $table->updateEmployee($newEmployee, $GLOBALS['id']);
-//        header('Location: '.'http://localhost/cosc344/employeeRecords.php');
+        $table->updateEmployee($newEmployee, $_SESSION['id']);
+        header('Location: '.'http://localhost/cosc344/employeeRecords.php');
+        session_destroy();
     }
 ?>
 
