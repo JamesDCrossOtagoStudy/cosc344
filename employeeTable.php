@@ -176,7 +176,7 @@ class Employee extends EmployeeTable
         } else {
             $tmp = '&nbsp';
         }
-        $str .= '<td>' . "<a href=editEmployee.php?ird=$tmp>" . $tmp . "</a>" . '</td>';
+        $str .= '<td>' . "<a href=employeeForm.php?ird=$tmp>" . $tmp . "</a>" . '</td>';
         $str .= '<td>' . ($this->contact_number !== null ? htmlentities($this->contact_number, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->weekly_hours !== null ? htmlentities($this->weekly_hours, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->hourly_rate !== null ? htmlentities($this->hourly_rate, ENT_QUOTES) : '&nbsp') . '</td>';

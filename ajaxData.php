@@ -26,6 +26,3 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
     }
     oci_free_statement($stid);
 }
-
-
-

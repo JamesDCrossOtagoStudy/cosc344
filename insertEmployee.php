@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+        form  { display: table;      }
+        p     { display: table-row;  }
+        label { display: table-cell; }
+        input { display: table-cell; }
+        select{ display: table-cell; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
-        
+        $(document).ready(function () {
+            $('#add').on('click', function () {
+               $.ajax('employeeForm.php', {
+                   success: function (html) {
+                       $('#insertionForm').html(html);
+                   }
+               });
+            });
+        });
     </script>
 </head>
 <body>
@@ -17,8 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     printf($table);
 }
 ?>
+<br>
 <div id="employeeForm">
-    <button id="add">Add another Employee?</button>
+    <div id="insertionForm">
+        <button id="add">Add another Employee?</button>
+    </div>
 </div>
 <p>
     <a href="index.html">Go back to home page</a>
