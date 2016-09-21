@@ -67,14 +67,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         ?>
         <div class="container">
-            <form action="employeeForm.php" method="post" id="editEmployeeForm">
+            <form action="employeeForm.php" method="post" id="employeeForm" onsubmit="return validateEmployeeForm(this)">
                 <p>
                     <label>First Name</label>
                     <input type="text" name="fname" id="fname" value="<?php echo $fname; ?>">
                 </p>
                 <p>
                     <label>Middle Name</label>
-                    <input type="text" name="middle" id="middle" value="<?php echo $middle_name; ?>">
+                    <input type="text" name="middle_name" id="middle" value="<?php echo $middle_name; ?>">
                 </p>
                 <p>
                     <label>Last Name</label>
@@ -163,21 +163,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $table = new EmployeeTable();
         $dom = new DOMDocument();
         if ($_POST['submit'] == "Save") {
-            $newEmployee = new Employee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_SESSION['id']
+            $newEmployee = new Employee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $_SESSION['id']
                 ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
             $table->updateEmployee($newEmployee, $_SESSION['id']);
             session_destroy();
         } elseif ($_POST['submit'] == "Add") {
-            $table->insertEmployee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_POST['id']
+            $table->insertEmployee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $_POST['ird_number']
                 ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
         }
 
 //        header('Location: '.'http://localhost/cosc344/employeeRecords.php');
     }
 ?>
-
 <p>
     <a href="index.html">Go back to Home page</a>
 </p>
+<script>
+    function validateEmployeeForm(form) {
+        var fail = "";
+        fail = checkName(form.fname.value);
+        fail += checkName(form.lname.value);
+        fail += checkMiddle_init(form.middle_name.value);
+        fail += checkIRD(form.ird_number.value);
+        fail += checkContactNumber(form.contact_number.value);
+
+
+        if (isEmpty($('#weekly_hours').val())) {
+            fail += "You must select weekly hours\n";
+        }
+        if ($('#baddress').val() == "select bookstore address") {
+            fail += "Please select the bookstore\n";
+        }
+
+        if (fail == "") {
+            return true;
+        } else {
+            alert(fail);
+            return false;
+        }
+    }
+</script>
 
 

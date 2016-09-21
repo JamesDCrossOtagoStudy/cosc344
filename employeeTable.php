@@ -78,17 +78,14 @@ class EmployeeTable extends Connection{
     }
 
     public function insertEmployee($fname, $middle_init, $lname, $ird_number, $contact_number,$weekly_hours,$hourly_rate, $baddress) {
-        $insertString = "insert into employee VALUES ('{$fname}', '{$middle_init}', '{$lname}', '{$ird_number}', {$contact_number}, {$weekly_hours}, {$hourly_rate}, {$baddress})";
-
+        $insertString = "insert into employee VALUES ('{$fname}', '{$middle_init}', '{$lname}', '{$ird_number}', '{$contact_number}', '{$weekly_hours}', '{$hourly_rate}', '{$baddress}')";
         $this->stid = oci_parse(self::$conn, $insertString);
         $result = oci_execute($this->stid);
 
-        if ($result && count(self::$bookstores) != 0) {
+        if ($result && count(self::$table) != 0) {
             $newEmployee = new Employee($fname, $middle_init, $lname, $contact_number,$weekly_hours,$hourly_rate, $baddress);
             array_push(self::$table, $newEmployee);
             return $this;
-        } else {
-            echo "insert failed";
         }
     }
 
