@@ -78,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <p>
                     <label>Weekly Hours</label>
                     <select name="weekly_hours" id="weekly_hours">
-                        <option value=<?php echo $theEmployee->weekly_hours; ?>><?php echo $theEmployee->weekly_hours; ?></option>
                         <?php
                         // for employee wage selection
                         $connection = new Connection();
@@ -90,7 +89,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             $result = oci_execute($stid);
                             if ($result) {
                                 while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
-                                    echo "<option value='{$row['WEEKLY_HOURS']}'>" . $row['WEEKLY_HOURS'] . "</option>";
+                                    if ($row['WEEKLY_HOURS'] == $theEmployee->weekly_hours) {
+                                        echo "<option value='{$row['WEEKLY_HOURS']}' selected='selected'>" . $row['WEEKLY_HOURS'] . "</option>";
+                                    } else {
+                                        echo "<option value='{$row['WEEKLY_HOURS']}'>" . $row['WEEKLY_HOURS'] . "</option>";
+                                    }
                                 }
                             }
                             oci_free_statement($stid);
@@ -107,7 +110,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <p>
                     <label>Bookstore Address</label>
                     <select name="baddress" id="baddress">
-                        <option value="<?php echo $theEmployee->baddress; ?>"><?php echo $theEmployee->baddress; ?></option>
                         <?php
                         if ($connection->testConnection()) {
                             $conn = $connection->getConnection();
@@ -117,7 +119,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             $result = oci_execute($stid);
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                                 $address = $row['ADDRESS'];
-                                echo "<option value='" . $address . "'>" . $address ."</option>";
+                                if($address == $theEmployee->baddress){
+                                    echo "<option value='" . $address . "' selected='selected'>" . $address ."</option>";
+
+                                }else {
+                                    echo "<option value='" . $address . "'>" . $address . "</option>";
+                                }
                             }
                             oci_free_statement($stid);
                         }
@@ -131,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         </div>
         <?php
     } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $newEmployee = new Employee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_POST['ird_number']
+        $newEmployee = new Employee($_POST['fname'], $_POST['middle'], $_POST['lname'], $_SESSION['id']
         ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
 
         $table = new EmployeeTable();
