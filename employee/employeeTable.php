@@ -5,7 +5,7 @@
  * Date: 9/19/16
  * Time: 2:43 PM
  */
-require_once('Connection.php');
+require_once('../Connection.php');
 
 class EmployeeTable extends Connection{
     private static $table = [];

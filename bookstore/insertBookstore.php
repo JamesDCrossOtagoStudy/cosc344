@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         <input type="submit">
     </pre></form>
     <p>
-        <a href="index.html">home</a>
+        <a href="../index.html">home</a>
     </p>
     <?php
 } else {

@@ -5,7 +5,7 @@
  * Date: 9/19/16
  * Time: 4:49 PM
  */
-require_once ('EmployeeTable.php');
+require_once('employeeTable.php');
 if(!isset($_SESSION['id'])){
     session_start();
 }
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     select{ display: table-cell; }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/formValidation.js"></script>
+<script src="../js/formValidation.js"></script>
 <script>
     $(document).ready(function () {
         $('#weekly_hours').on('change', function () {
@@ -176,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
 ?>
 <p>
-    <a href="index.html">Go back to Home page</a>
+    <a href="../index.html">Go back to Home page</a>
 </p>
 <script>
     function validateEmployeeForm(form) {

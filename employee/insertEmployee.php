@@ -29,8 +29,8 @@
 </head>
 <body>
 <?php
-include_once('Connection.php');
-include_once('EmployeeTable.php');
+include_once('../Connection.php');
+include_once('employeeTable.php');
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $table = new EmployeeTable();
     $table->update();
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     </div>
 </div>
 <p>
-    <a href="index.html" id="go_back_home">Go back to home page</a>
+    <a href="../index.html" id="go_back_home">Go back to home page</a>
 </p>
 </body>
 </html>

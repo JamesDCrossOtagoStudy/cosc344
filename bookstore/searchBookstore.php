@@ -21,5 +21,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 ?>
 
 <p>
-    <a href="index.html">go back to homepage</a>
+    <a href="../index.html">go back to homepage</a>
 </p>
