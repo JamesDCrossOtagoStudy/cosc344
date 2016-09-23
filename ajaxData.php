@@ -30,7 +30,6 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
     $conn = $connection->getConnection();
     $isbn = $_POST['selectedBookISBN'];
 
-
     $queryString = "select AMOUNT_IN_STOCK from book where ISBN=" . "'{$isbn}'";
 
     $stid = oci_parse($conn, $queryString);
@@ -40,12 +39,13 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
         $available = 0;
         while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
             $available = $row['AMOUNT_IN_STOCK'];
-
         }
-        if ($available != 0 || $available != "0") {
+        if ($available != 0 || $available != "0" || $available == "") {
             for ($i = 1; $i <= $available; $i++) {
                 echo "<option value=" . $i . ">" . $i . "</option>";
             }
+        } else {
+            echo "<option value=" . "Select the book First". ">Select the book First</option>";
         }
     }
 }  else {

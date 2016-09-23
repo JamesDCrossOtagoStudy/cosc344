@@ -38,8 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#max').hide();
-
             $('#selectedBook').on('change', function () {
                 var selectedBookISBN = $(this).val();
                 if (selectedBookISBN) {
@@ -48,14 +46,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         data: 'selectedBookISBN=' + selectedBookISBN,
                         success: function (html) {
                             $('#stock_available').html(html);
-                            $('#max').show();
+                            $('#stock_available').click();
                         }
                     });
                 }
             });
+
+            $('#stock_available').on('change', function () {
+                var selectedNumOfBook = $(this).val();
+                if (selectedNumOfBook != "Select the book First") {
+                    $('#addToShoppingList').prop('disabled', false);
+                }
+            });
         });
     </script>
-
     <h2>
         Shopping Simulation:
     </h2>
@@ -119,16 +123,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 </select>
             </p>
             <p>
-                <label>the max number of book available</label>
+                <label>Please select the number of books you want to buy</label>
                 <select id="stock_available" name="stock_available">
-                    <option>Select the book First</option>
+                    <option value="Select the book First">Select the book First</option>
                 </select>
+                <button name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list</button>
             </p>
-            <p id="max">
-                <label>the number of book you buy </label>
-                <input type="text" id="purchaseNumber" name="purchase" value="">
-            </p>
-
         </form>
     </div>
     <?php
