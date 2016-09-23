@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transaction/transactionProcess.php" afterPath="$PROJECT_DIR$/transaction/transactionProcess.php" />
     </list>
     <ignored path="cosc344.iws" />
@@ -28,12 +27,12 @@
       <file leaf-file-name="transactionProcess.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1451">
-              <caret line="123" column="22" selection-start-line="123" selection-start-column="22" selection-end-line="123" selection-end-column="22" />
+            <state relative-caret-position="251">
+              <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
               <folding>
-                <marker date="1474670035000" expanded="true" signature="2354:2385" ph="select ird_n... employee" />
-                <marker date="1474670035000" expanded="true" signature="3311:3343" ph="select CUSTO... customer" />
-                <marker date="1474670035000" expanded="true" signature="4267:4295" ph="select TITLE... book" />
+                <marker date="1474670301000" expanded="true" signature="2561:2592" ph="select ird_n... employee" />
+                <marker date="1474670301000" expanded="true" signature="3518:3550" ph="select CUSTO... customer" />
+                <marker date="1474670301000" expanded="true" signature="4474:4502" ph="select TITLE... book" />
               </folding>
             </state>
           </provider>
@@ -361,7 +360,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98766000" />
+    <option name="totallyTimeSpent" value="98995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="6" />
@@ -753,12 +752,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1451">
-          <caret line="123" column="22" selection-start-line="123" selection-start-column="22" selection-end-line="123" selection-end-column="22" />
+        <state relative-caret-position="251">
+          <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
           <folding>
-            <marker date="1474670035000" expanded="true" signature="2354:2385" ph="select ird_n... employee" />
-            <marker date="1474670035000" expanded="true" signature="3311:3343" ph="select CUSTO... customer" />
-            <marker date="1474670035000" expanded="true" signature="4267:4295" ph="select TITLE... book" />
+            <marker date="1474670301000" expanded="true" signature="2561:2592" ph="select ird_n... employee" />
+            <marker date="1474670301000" expanded="true" signature="3518:3550" ph="select CUSTO... customer" />
+            <marker date="1474670301000" expanded="true" signature="4474:4502" ph="select TITLE... book" />
           </folding>
         </state>
       </provider>

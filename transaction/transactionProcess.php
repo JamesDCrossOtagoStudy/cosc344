@@ -59,6 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             });
 
             $('#addToShoppingList').on('click', function () {
+                var selectedBookISBN = $('#selectedBook').val();
+                var selectedNum = $('#numberOfBookSelected').val();
+                if (selectedBookISBN && selectedNum) {
+
+                }
             });
         });
     </script>
