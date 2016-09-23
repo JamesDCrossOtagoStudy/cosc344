@@ -5,7 +5,15 @@
  * Date: 9/23/16
  * Time: 10:30 PM
  */
-?>
+require_once('../customer/customerTable.php');
+require_once('../employee/employeeTable.php');
+require_once('../book/bookTable.php');
+require_once('../Connection.php');
+
+$connection = new Connection();
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    ?>
     <style type="text/css">
         form {
             display: table;
@@ -31,30 +39,20 @@
     <script>
         $(document).ready(function () {
             $('#selectedBook').on('change', function () {
-                var selectedBookISBN = $(this).value;
-                alert("the book you selected: " + selectedBookISBN);
+                var selectedBookISBN = $(this).val();
                 if (selectedBookISBN) {
                     $.ajax('../ajaxData.php', {
                         type: 'POST',
-                        data: 'selectedBookISBN='+selectedBookISBN,
+                        data: 'selectedBookISBN=' + selectedBookISBN,
                         success: function (html) {
-                            $('#stock').html(html);
+                            $('#stock_available').html(html);
                         }
                     });
                 }
             });
         });
     </script>
-<?php
-require_once('../customer/customerTable.php');
-require_once('../employee/employeeTable.php');
-require_once('../book/bookTable.php');
-require_once('../Connection.php');
 
-$connection = new Connection();
-
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    ?>
     <h2>
         Shopping Simulation:
     </h2>
@@ -108,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 }
                 ?>
             </select>
-            <select id="stock" name="stock">
+            <select id="stock_available" name="stock_available">
                 <option>Select the book First</option>
             </select>
         </form>
