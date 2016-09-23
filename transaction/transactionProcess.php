@@ -45,15 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         type: 'POST',
                         data: 'selectedBookISBN=' + selectedBookISBN,
                         success: function (html) {
-                            $('#stock_available').html(html);
-                            var selectedNumOfBook = $('#stock_available').val();
+                            $('#numberOfBookSelected').html(html);
+                            var selectedNumOfBook = $('#numberOfBookSelected').val();
                             if (selectedNumOfBook) {
                                 $('#addToShoppingList').prop('disabled', false);
                             }
                         }
                     });
                 } else {
-                    $('#stock_available').html("<option value=''>Select the book First</option>")
+                    $('#numberOfBookSelected').html("<option value=''>Select the book First</option>")
                     $('#addToShoppingList').prop('disabled', true);
                 }
             });
@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             </p>
             <p>
                 <label>Please select the number of books you want to buy</label>
-                <select id="stock_available" name="stock_available">
+                <select id="numberOfBookSelected" name="numberOfBookSelected">
                     <option value=''>Select the book First</option>
                 </select>
                 <button name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list</button>
