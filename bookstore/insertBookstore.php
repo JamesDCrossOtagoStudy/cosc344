@@ -25,6 +25,21 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#add').on('click', function () {
+                $.ajax('bookstoreForm.php', {
+                    data: "addNewBookstore=1",
+                    success: function (html) {
+                        $('#insertionForm').html(html);
+                        $('#storeID').prop('disabled', false);
+                        $('#submit').val('Add');
+                        $('#go_back_home').prop('disable', true).hide();
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <?php

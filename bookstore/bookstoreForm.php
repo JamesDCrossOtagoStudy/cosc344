@@ -5,16 +5,24 @@
  * Date: 9/23/16
  * Time: 11:09 AM
  */
-require_once ('bookstoreTable.php');
+require_once('bookstoreTable.php');
 
 $theBookstore = null;
 
 // if it is directed to this page by click the storeID
-if ((isset($_GET['storeID'])) && !empty($_GET['storeID'])) {
-    $id = $_GET['storeID'];
-    $table = new BookstoreTable();
-    $table->getAllBookStores();
-    $theBookstore = $table->getBookstoreByID($id);
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $id = null;
+
+    if ((isset($_GET['storeID'])) && !empty($_GET['storeID'])) {
+        $id = $_GET['storeID'];
+
+        if ($id != null) {
+            $table = new BookstoreTable();
+            $table->getAllBookStores();
+            $theBookstore = $table->getBookstoreByID($id);
+        }
+
+    }
 
     $storeID = $theBookstore == null ? "" : $theBookstore->storeID;
     $city = $theBookstore == null ? "" : $theBookstore->city;
@@ -23,6 +31,7 @@ if ((isset($_GET['storeID'])) && !empty($_GET['storeID'])) {
     $date_opened = $theBookstore == null ? "" : $theBookstore->date_opened;
     $total_salary = $theBookstore == null ? "" : $theBookstore->total_salary;
 }
+
 ?>
 
 <style type="text/css">
@@ -70,4 +79,6 @@ if ((isset($_GET['storeID'])) && !empty($_GET['storeID'])) {
             </form>
         </div>
         <?php
+    } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        
     }

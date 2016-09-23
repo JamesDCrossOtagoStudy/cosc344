@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $table = new EmployeeTable();
             $table->update();
             $theEmployee = $table->getEmployeeByIRD($ird);
-
         }
     }
     
