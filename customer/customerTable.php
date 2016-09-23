@@ -62,7 +62,7 @@ class CustomerTable extends Connection {
                 $eachCustomer->fname = $row['FNAME'];
                 $eachCustomer->lname = $row['LNAME'];
                 $eachCustomer->phone = $row['PHONE'];
-                array_push(self::$table, $eachEmployee);
+                array_push(self::$table, $eachCustomer);
             }
         }
     }

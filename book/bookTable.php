@@ -64,7 +64,7 @@ class BookTable extends Connection {
                 $eachCustomer->lname = $row['LNAME'];
                 $eachCustomer->price = $row['PRICE'];
                 $eachCustomer->amount_in_stock = $row['AMOUNT_IN_STOCK'];
-                array_push(self::$table, $eachEmployee);
+                array_push(self::$table, $eachCustomer);
             }
         }
     }
