@@ -57,13 +57,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     $('#addToShoppingList').prop('disabled', true);
                 }
             });
+
+            $('#addToShoppingList').on('click', function () {
+            });
         });
     </script>
     <h2>
         Shopping Simulation:
     </h2>
     <div class="container">
-        <form id="processForm" name="processForm">
+        <form id="processForm" name="processForm" action="transactionProcess.php">
             <p>
                 <label>the employee who do the operation</label>
                 <select name="employee" id="employee">
@@ -126,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <select id="numberOfBookSelected" name="numberOfBookSelected">
                     <option value=''>Select the book First</option>
                 </select>
-                <button name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list</button>
+                <button type="button" name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list</button>
             </p>
         </form>
     </div>
