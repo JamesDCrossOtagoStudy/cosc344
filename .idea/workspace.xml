@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookstore/bookstoreForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookstore/insertBookstore.php" afterPath="$PROJECT_DIR$/bookstore/insertBookstore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookstore/searchBookstore.php" afterPath="$PROJECT_DIR$/bookstore/searchBookstore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="cosc344.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +23,7 @@
     <favorites_list name="cosc344" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.48354793">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="employeeForm.php" pinned="false" current-in-tab="false">
@@ -45,12 +42,14 @@
           <file leaf-file-name="bookstoreTable.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bookstore/bookstoreTable.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state relative-caret-position="465">
+                  <caret line="60" column="63" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
                   <folding>
-                    <marker date="1474585248000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
-                    <marker date="1474585248000" expanded="true" signature="1963:2057" ph="insert into bookstore... " />
-                    <marker date="1474585248000" expanded="true" signature="4241:4320" ph="update books... " />
+                    <marker date="1474591316000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
+                    <marker date="1474591316000" expanded="true" signature="2027:2058" ph="insert into bookstore... " />
+                    <marker date="1474591316000" expanded="true" signature="2027:2135" ph="insert into bookstore... " />
+                    <marker date="1474591316000" expanded="true" signature="3085:3221" ph="..." />
+                    <marker date="1474591316000" expanded="true" signature="4261:4340" ph="update books... " />
                   </folding>
                 </state>
               </provider>
@@ -79,18 +78,9 @@
           <file leaf-file-name="insertBookstore.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/bookstore/insertBookstore.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-                  <folding>
-                    <marker date="1474585841000" expanded="true" signature="329:557" ph="..." />
-                    <marker date="1474585841000" expanded="true" signature="360:534" ph="{...}" />
-                    <marker date="1474585841000" expanded="true" signature="411:515" ph="{&quot;changeMonth&quot;: true...}" />
-                    <marker date="1474585841000" expanded="true" signature="616:1182" ph="..." />
-                    <marker date="1474585841000" expanded="true" signature="682:1081" ph="..." />
-                    <marker date="1474585841000" expanded="true" signature="687:1074" ph="..." />
-                    <marker date="1474585841000" expanded="true" signature="1096:1160" ph="..." />
-                    <marker date="1474585841000" expanded="true" signature="1192:1619" ph="..." />
-                  </folding>
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -125,23 +115,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="insertBookstore.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="insertBookstore.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bookstore/insertBookstore.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1182#1192#0#PHP" expanded="true" />
-                  </folding>
+                <state relative-caret-position="446">
+                  <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="bookstoreForm.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="bookstoreForm.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/bookstore/bookstoreForm.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
-                  <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+                  <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -193,8 +181,9 @@
         <option value="$PROJECT_DIR$/employee/employeeTable.php" />
         <option value="$PROJECT_DIR$/employee/insertEmployee.php" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/bookstore/insertBookstore.php" />
         <option value="$PROJECT_DIR$/bookstore/bookstoreForm.php" />
+        <option value="$PROJECT_DIR$/bookstore/bookstoreTable.php" />
+        <option value="$PROJECT_DIR$/bookstore/insertBookstore.php" />
       </list>
     </option>
   </component>
@@ -419,18 +408,18 @@
       <workItem from="1474421876455" duration="7579000" />
       <workItem from="1474431584911" duration="7514000" />
       <workItem from="1474449262659" duration="6551000" />
-      <workItem from="1474584866619" duration="1046000" />
+      <workItem from="1474584866619" duration="2936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71892000" />
+    <option name="totallyTimeSpent" value="73782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20028612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20028612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -489,9 +478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding>
-            <element signature="e#1182#1192#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -527,9 +514,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-          <folding>
-            <element signature="e#1182#1192#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -650,9 +635,11 @@
         <state relative-caret-position="1200">
           <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="86" selection-end-column="5" />
           <folding>
-            <marker date="1474585248000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
-            <marker date="1474585248000" expanded="true" signature="1963:2057" ph="insert into bookstore... " />
-            <marker date="1474585248000" expanded="true" signature="4241:4320" ph="update books... " />
+            <marker date="1474591316000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
+            <marker date="1474591316000" expanded="true" signature="2027:2058" ph="insert into bookstore... " />
+            <marker date="1474591316000" expanded="true" signature="2027:2135" ph="insert into bookstore... " />
+            <marker date="1474591316000" expanded="true" signature="3085:3221" ph="..." />
+            <marker date="1474591316000" expanded="true" signature="4261:4340" ph="update books... " />
           </folding>
         </state>
       </provider>
@@ -725,9 +712,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1474585248000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
-            <marker date="1474585248000" expanded="true" signature="1963:2057" ph="insert into bookstore... " />
-            <marker date="1474585248000" expanded="true" signature="4241:4320" ph="update books... " />
+            <marker date="1474591316000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
+            <marker date="1474591316000" expanded="true" signature="2027:2058" ph="insert into bookstore... " />
+            <marker date="1474591316000" expanded="true" signature="2027:2135" ph="insert into bookstore... " />
+            <marker date="1474591316000" expanded="true" signature="3085:3221" ph="..." />
+            <marker date="1474591316000" expanded="true" signature="4261:4340" ph="update books... " />
           </folding>
         </state>
       </provider>
@@ -841,16 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookstore/insertBookstore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#1182#1192#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/employee/employeeForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2640">
@@ -862,22 +841,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bookstore/bookstoreForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookstore/bookstoreTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="465">
+          <caret line="60" column="63" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
           <folding>
-            <marker date="1474585248000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
-            <marker date="1474585248000" expanded="true" signature="1963:2057" ph="insert into bookstore... " />
-            <marker date="1474585248000" expanded="true" signature="4241:4320" ph="update books... " />
+            <marker date="1474591316000" expanded="true" signature="1191:1214" ph="select * fro... bookstore" />
+            <marker date="1474591316000" expanded="true" signature="2027:2058" ph="insert into bookstore... " />
+            <marker date="1474591316000" expanded="true" signature="2027:2135" ph="insert into bookstore... " />
+            <marker date="1474591316000" expanded="true" signature="3085:3221" ph="..." />
+            <marker date="1474591316000" expanded="true" signature="4261:4340" ph="update books... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookstore/bookstoreForm.php">
+    <entry file="file://$PROJECT_DIR$/bookstore/insertBookstore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="446">
+          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
           <folding />
         </state>
       </provider>
