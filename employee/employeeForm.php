@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $contanct_number = $theEmployee == null ? "" : $theEmployee->contact_number;
     $weekly_hours = $theEmployee == null ? "select weekly hours" : $theEmployee->weekly_hours;
     $hourly_rate = $theEmployee == null ? "select weekly hours first" : $theEmployee->hourly_rate;
-    $bookstoreAddress = $theEmployee == null ? "select bookstore address" : $theEmployee->baddress;
+    $bookstoreID = $theEmployee == null ? "select bookstore ID" : $theEmployee->bookstoreID;
 }
 ?>
 <style type="text/css">
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $('#weekly_hours').on('change', function () {
             var selectedValue = $(this).val();
             if (selectedValue) {
-                $.ajax('ajaxData.php', {
+                $.ajax('../ajaxData.php', {
                     type: 'POST',
                     data: 'selected_weekly_hours=' + selectedValue,
                     success: function (html) {
@@ -125,25 +125,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     </select>
                 </p>
                 <p>
-                    <label>Bookstore Address</label>
-                    <select name="baddress" id="baddress">
+                    <label>Bookstore ID</label>
+                    <select name="bookstoreID" id="bookstoreID">
                         <?php
                         if ($connection->testConnection()) {
                             $conn = $connection->getConnection();
-                            $queryString = "select distinct(address) from bookstore";
+                            $queryString = "select storeID from bookstore";
                             $stid = oci_parse($conn, $queryString);
 
                             $result = oci_execute($stid);
-                            if ($bookstoreAddress == "select bookstore address") {
-                                echo "<option value='" . $bookstoreAddress . "'>" . $bookstoreAddress . "</option>";
+                            if ($bookstoreID == "select bookstore ID") {
+                                echo "<option value='" . $bookstoreID . "'>" . $bookstoreID . "</option>";
                             }
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
-                                $address = $row['ADDRESS'];
-                                if($address == $bookstoreAddress){
-                                    echo "<option value='" . $address . "' selected='selected'>" . $address ."</option>";
+                                $bID = $row['STOREID'];
+                                if($bID == $bookstoreID){
+                                    echo "<option value='" . $bID . "' selected='selected'>" . $bID ."</option>";
 
                                 }else {
-                                    echo "<option value='" . $address . "'>" . $address . "</option>";
+                                    echo "<option value='" . $bID . "'>" . $bID . "</option>";
                                 }
                             }
                             oci_free_statement($stid);
@@ -164,12 +164,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $dom = new DOMDocument();
         if ($_POST['submit'] == "Save") {
             $newEmployee = new Employee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $_SESSION['id']
-                ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
+                ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['bookstoreID']);
             $table->updateEmployee($newEmployee, $_SESSION['id']);
             session_destroy();
         } elseif ($_POST['submit'] == "Add") {
             $table->insertEmployee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $_POST['ird_number']
-                ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['baddress']);
+                ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['bookstoreID']);
         }
 
 //        header('Location: '.'http://localhost/cosc344/employeeRecords.php');
