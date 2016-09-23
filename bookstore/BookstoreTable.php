@@ -27,9 +27,23 @@ class BookstoreTable extends Connection
         return $str;
     }
 
-    public function getBookStoreAtIndex($num)
+    public function getBookstoreByID($id)
     {
-        return self::$bookstores[$num];
+        if ($this->testConnection()) {
+            $this->stid = oci_parse(self::$conn, "select * from bookstore WHERE storeID='{$id}'");
+            $result = oci_execute($this->stid);
+
+            while ($row = oci_fetch_array($this->stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
+                $storeID = $row['STOREID'];
+                $city = $row['CITY'];
+                $address = $row['ADDRESS'];
+                $account = $row['ACCOUNT'];
+                $date_opened = $row['DATE_OPENED'];
+                $total_salary = $row['TOTAL_SALARY'];
+                $theBookstore = new SingleBookstore($storeID, $city, $address, $account, $date_opened, $total_salary);
+                return $theBookstore;
+            }
+        }
     }
 
     // return an array of bookstore which contains the word you specified
@@ -83,12 +97,12 @@ class BookstoreTable extends Connection
 
 class SingleBookstore extends BookstoreTable
 {
-    private $storeID;
-    private $city;
-    private $address;
-    private $account;
-    private $date_opened;
-    private $total_salary;
+    public $storeID;
+    public $city;
+    public $address;
+    public $account;
+    public $date_opened;
+    public $total_salary;
 
     
     private $stid = null;
@@ -113,7 +127,8 @@ class SingleBookstore extends BookstoreTable
         } else {
             $tmp = '&nbsp';
         }
-        $str .= '<td>' . "<a href=bookstoreForm.php?ird=$tmp>" . $tmp . "</a>" . '</td>';
+        $str .= '<td>' . "<a href=bookstoreForm.php?storeID=$tmp>" . $tmp . "</a>" . '</td>';
+        
         $str .= '<td>' . ($this->city !== null ? htmlentities($this->city, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->address !== null ? htmlentities($this->address, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->account !== null ? htmlentities($this->account, ENT_QUOTES) : '&nbsp') . '</td>';

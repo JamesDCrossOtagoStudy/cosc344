@@ -24,7 +24,7 @@ class EmployeeTable extends Connection{
         $str .= '<td>' . "contact_number" . '</td>';
         $str .= '<td>' . "weekly_hours" . '</td>';
         $str .= '<td>' . "hourly_rate" . '</td>';
-        $str .= '<td>' . "bookstore_address" . '</td>';
+        $str .= '<td>' . "bookstoreID" . '</td>';
         $str .= "\n";
         $str .= "</tr>\n";
 
@@ -50,8 +50,8 @@ class EmployeeTable extends Connection{
                 $contact_number = $row['CONTACT_NUMBER'];
                 $weekly_hours = $row['WEEKLY_HOURS'];
                 $hourly_rate = $row['HOURLY_RATE'];
-                $baddress = $row['BADDRESS'];
-                $eachEmployee = new Employee($fname, $middle_init, $lname, $ird_number, $contact_number,$weekly_hours,$hourly_rate,$baddress);
+                $bookstoreID = $row['BOOKSTOREID'];
+                $eachEmployee = new Employee($fname, $middle_init, $lname, $ird_number, $contact_number,$weekly_hours,$hourly_rate,$bookstoreID);
                 array_push(self::$table, $eachEmployee);
             }
         }
@@ -70,20 +70,20 @@ class EmployeeTable extends Connection{
                 $contact_number = $row['CONTACT_NUMBER'];
                 $weekly_hours = $row['WEEKLY_HOURS'];
                 $hourly_rate = $row['HOURLY_RATE'];
-                $baddress = $row['BADDRESS'];
-                $theEmployee = new Employee($fname, $middle_init, $lname, $ird_number, $contact_number, $weekly_hours, $hourly_rate, $baddress);
+                $bookstoreID = $row['BOOKSTOREID'];
+                $theEmployee = new Employee($fname, $middle_init, $lname, $ird_number, $contact_number, $weekly_hours, $hourly_rate, $bookstoreID);
                 return $theEmployee;
             }
         }
     }
 
-    public function insertEmployee($fname, $middle_init, $lname, $ird_number, $contact_number,$weekly_hours,$hourly_rate, $baddress) {
-        $insertString = "insert into employee VALUES ('{$fname}', '{$middle_init}', '{$lname}', '{$ird_number}', '{$contact_number}', '{$weekly_hours}', '{$hourly_rate}', '{$baddress}')";
+    public function insertEmployee($fname, $middle_init, $lname, $ird_number, $contact_number,$weekly_hours,$hourly_rate, $bookstoreID) {
+        $insertString = "insert into employee VALUES ('{$fname}', '{$middle_init}', '{$lname}', '{$ird_number}', '{$contact_number}', '{$weekly_hours}', '{$hourly_rate}', '{$bookstoreID}')";
         $this->stid = oci_parse(self::$conn, $insertString);
         $result = oci_execute($this->stid);
 
         if ($result && count(self::$table) != 0) {
-            $newEmployee = new Employee($fname, $middle_init, $lname, $contact_number,$weekly_hours,$hourly_rate, $baddress);
+            $newEmployee = new Employee($fname, $middle_init, $lname, $contact_number,$weekly_hours,$hourly_rate, $bookstoreID);
             array_push(self::$table, $newEmployee);
             return $this;
         }
@@ -97,10 +97,10 @@ class EmployeeTable extends Connection{
         $contact_number =$newEmployee->contact_number;
         $weekly_hours = $newEmployee->weekly_hours;
         $hourly_rate = $newEmployee->hourly_rate;
-        $baddress = $newEmployee->baddress;
+        $bookstoreID = $newEmployee->bookstoreID;
 
         $updateString = "update employee set FNAME='{$fname}', MIDDLE_INIT='{$middle}', LNAME='{$lname}', IRD_NUMBER = '{$ird_number}',
-                        CONTACT_NUMBER='{$contact_number}', WEEKLY_HOURS='{$weekly_hours}', HOURLY_RATE='{$hourly_rate}', BADDRESS='{$baddress}'
+                        CONTACT_NUMBER='{$contact_number}', WEEKLY_HOURS='{$weekly_hours}', HOURLY_RATE='{$hourly_rate}', BOOKSTOREID='{$bookstoreID}'
                         where ird_number='{$old_ird_number}'";
         echo "update string is:\n {$updateString}";
         $this->stid = oci_parse(self::$conn, $updateString);
@@ -125,15 +125,6 @@ class EmployeeTable extends Connection{
 
 class Employee extends EmployeeTable
 {
-//fname    VARCHAR2(15) NOT NULL,
-//middle_init    CHAR,
-//lname    VARCHAR2(15) NOT NULL,
-//ird_number      CHAR(11)      PRIMARY KEY,
-//contact_number  CHAR(10),
-//weekly_hours   NUMBER(2),
-//hourly_rate    NUMBER(5) NOT NULL, /*Currency*/
-//baddress
-
     public $fname;
     public $middle_init;
     public $lname;
@@ -141,12 +132,12 @@ class Employee extends EmployeeTable
     public $contact_number;
     public $weekly_hours;
     public $hourly_rate;
-    public $baddress;
+    public $bookstoreID;
 
     private $stid = null;
 
 
-    public function __construct($fname, $middle_init, $lanme, $ird_number, $contact_number, $weekly_hours, $hourly_rate, $baddress)
+    public function __construct($fname, $middle_init, $lanme, $ird_number, $contact_number, $weekly_hours, $hourly_rate, $bookstoreID)
     {
         parent::__construct();
         $this->fname = $fname;
@@ -156,7 +147,7 @@ class Employee extends EmployeeTable
         $this->contact_number = $contact_number;
         $this->weekly_hours = $weekly_hours;
         $this->hourly_rate = $hourly_rate;
-        $this->baddress = $baddress;
+        $this->bookstoreID = $bookstoreID;
 
     }
 
@@ -177,7 +168,7 @@ class Employee extends EmployeeTable
         $str .= '<td>' . ($this->contact_number !== null ? htmlentities($this->contact_number, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->weekly_hours !== null ? htmlentities($this->weekly_hours, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->hourly_rate !== null ? htmlentities($this->hourly_rate, ENT_QUOTES) : '&nbsp') . '</td>';
-        $str .= '<td>' . ($this->baddress !== null ? htmlentities($this->baddress, ENT_QUOTES) : '&nbsp') . '</td>';
+        $str .= '<td>' . ($this->bookstoreID !== null ? htmlentities($this->bookstoreID, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= "\n";
         $str .= "</tr>\n";
 
@@ -196,19 +187,6 @@ class Employee extends EmployeeTable
             return false;
         }
     }
-
-//    public function setNewContactNumber($contact_number) {
-//        $updateString = "update employee set contact_number = '{$contact_number}'  where contact_number = '{$this->contact_number}'";
-//        $this->stid = oci_parse(self::$conn, $updateString);
-//        $result = oci_execute($this->stid);
-//        if (!$result) {
-//            printf("update failure\n");
-//        } else {
-//            $this->contact_number = $contact_number;
-//        }
-//        return $this;
-//    }
-    
 
     public function __destruct()
     {
