@@ -81,7 +81,9 @@ class EmployeeTable extends Connection{
         $insertString = "insert into employee VALUES ('{$fname}', '{$middle_init}', '{$lname}', '{$ird_number}', '{$contact_number}', '{$weekly_hours}', '{$hourly_rate}', '{$bookstoreID}')";
         $this->stid = oci_parse(self::$conn, $insertString);
         $result = oci_execute($this->stid);
-
+        
+        echo "insertion string is:\n {$insertString}";
+        
         if ($result && count(self::$table) != 0) {
             $newEmployee = new Employee($fname, $middle_init, $lname, $contact_number,$weekly_hours,$hourly_rate, $bookstoreID);
             array_push(self::$table, $newEmployee);
@@ -102,6 +104,7 @@ class EmployeeTable extends Connection{
         $updateString = "update employee set FNAME='{$fname}', MIDDLE_INIT='{$middle}', LNAME='{$lname}', IRD_NUMBER = '{$ird_number}',
                         CONTACT_NUMBER='{$contact_number}', WEEKLY_HOURS='{$weekly_hours}', HOURLY_RATE='{$hourly_rate}', BOOKSTOREID='{$bookstoreID}'
                         where ird_number='{$old_ird_number}'";
+        
         echo "update string is:\n {$updateString}";
         $this->stid = oci_parse(self::$conn, $updateString);
         

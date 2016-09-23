@@ -158,9 +158,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         <?php
     } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-
         $table = new EmployeeTable();
-        $dom = new DOMDocument();
         if ($_POST['submit'] == "Save") {
             $newEmployee = new Employee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $_SESSION['id']
                 ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['bookstoreID']);

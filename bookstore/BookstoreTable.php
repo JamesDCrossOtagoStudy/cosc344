@@ -78,12 +78,24 @@ class BookstoreTable extends Connection
         }
     }
 
-    public function insertBookstore($storeID, $city, $address, $account, $data_opened, $total_salary) {
+    public function insertBookstore($storeID, $city, $address, $account, $data_opened) {
         $date = "TO_DATE('{$data_opened}','MM/DD/YYYY')";
-        $insertString = "insert into bookstore VALUES ('{$storeID}', '{$city}', '{$address}', '{$account}', {$date}, {$total_salary})";
-
+        $insertString = "insert into bookstore VALUES ('{$storeID}', '{$city}', '{$address}', '{$account}',  $date, '0')";
+        echo $insertString;
         $this->stid = oci_parse(self::$conn, $insertString);
         $result = oci_execute($this->stid);
+    }
+    
+    public function updateBookstoreWithID($city, $address, $account, $data_opened, $storeID) {
+        $updateString = "update bookstore set CITY='{$city}', address='{$address}', account='{$account}', date_opened='{$data_opened}' where storeID='{$storeID}'";
+        echo "update string is: \n $updateString";
+
+        $this->stid = oci_parse(self::$conn, $updateString);
+        $result = oci_execute($this->stid);
+        
+        if (!$result) {
+            echo "<p>Update failed, updateString is:" . $updateString . "</p>";
+        }
     }
 
     public function __destruct()
