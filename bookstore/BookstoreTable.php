@@ -108,7 +108,12 @@ class SingleBookstore extends BookstoreTable
     {
         $str = "\n";
         $str .= "<tr>\n";
-        $str .= '<td>' . ($this->storeID !== null ? htmlentities($this->storeID, ENT_QUOTES) : '&nbsp') . '</td>';
+        if ($this->storeID !== null) {
+            $tmp = htmlentities($this->storeID, ENT_QUOTES);
+        } else {
+            $tmp = '&nbsp';
+        }
+        $str .= '<td>' . "<a href=bookstoreForm.php?ird=$tmp>" . $tmp . "</a>" . '</td>';
         $str .= '<td>' . ($this->city !== null ? htmlentities($this->city, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->address !== null ? htmlentities($this->address, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->account !== null ? htmlentities($this->account, ENT_QUOTES) : '&nbsp') . '</td>';
