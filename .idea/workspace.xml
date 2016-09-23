@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxData.php" afterPath="$PROJECT_DIR$/ajaxData.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transaction/transactionProcess.php" afterPath="$PROJECT_DIR$/transaction/transactionProcess.php" />
     </list>
@@ -26,38 +25,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="transactionProcess.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="transactionProcess.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="127" column="88" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="88" />
+            <state relative-caret-position="299">
+              <caret line="114" column="82" selection-start-line="114" selection-start-column="82" selection-end-line="114" selection-end-column="82" />
               <folding>
-                <marker date="1474666689000" expanded="true" signature="2139:2170" ph="select ird_n... employee" />
-                <marker date="1474666689000" expanded="true" signature="3096:3128" ph="select CUSTO... customer" />
-                <marker date="1474666689000" expanded="true" signature="4052:4080" ph="select TITLE... book" />
+                <marker date="1474668467000" expanded="true" signature="2228:2259" ph="select ird_n... employee" />
+                <marker date="1474668467000" expanded="true" signature="3185:3217" ph="select CUSTO... customer" />
+                <marker date="1474668467000" expanded="true" signature="4141:4169" ph="select TITLE... book" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajaxData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-              <folding>
-                <marker date="1474666921000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
-                <marker date="1474666921000" expanded="true" signature="1160:1218" ph="select AMOUN... book" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employeeForm.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="employeeForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/employee/employeeForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="103" column="29" selection-start-line="101" selection-start-column="28" selection-end-line="103" selection-end-column="29" />
+            <state relative-caret-position="-105">
+              <caret line="58" column="85" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="85" />
               <folding>
                 <marker date="1474600992000" expanded="true" signature="3773:3821" ph="select disti... employee_wage" />
                 <marker date="1474600992000" expanded="true" signature="5566:5595" ph="select store... bookstore" />
@@ -127,8 +113,8 @@
         <option value="$PROJECT_DIR$/customer/insertCustomer.php" />
         <option value="$PROJECT_DIR$/customer/customerTable.php" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/transaction/transactionProcess.php" />
         <option value="$PROJECT_DIR$/ajaxData.php" />
+        <option value="$PROJECT_DIR$/transaction/transactionProcess.php" />
       </list>
     </option>
   </component>
@@ -357,12 +343,12 @@
       <workItem from="1474598628320" duration="8015000" />
       <workItem from="1474617374162" duration="2332000" />
       <workItem from="1474626121419" duration="7328000" />
-      <workItem from="1474665445424" duration="1652000" />
+      <workItem from="1474665445424" duration="3003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96848000" />
+    <option name="totallyTimeSpent" value="98199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="6" />
@@ -387,6 +373,26 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26279393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21173105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26279393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39972338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -732,34 +738,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ajaxData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+        <state relative-caret-position="214">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="9" />
           <folding>
-            <marker date="1474666921000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
-            <marker date="1474666921000" expanded="true" signature="1160:1218" ph="select AMOUN... book" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="127" column="88" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="88" />
-          <folding>
-            <marker date="1474666689000" expanded="true" signature="2139:2170" ph="select ird_n... employee" />
-            <marker date="1474666689000" expanded="true" signature="3096:3128" ph="select CUSTO... customer" />
-            <marker date="1474666689000" expanded="true" signature="4052:4080" ph="select TITLE... book" />
+            <marker date="1474667392000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+            <marker date="1474667392000" expanded="true" signature="1160:1218" ph="select AMOUN... book" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/employee/employeeForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="103" column="29" selection-start-line="101" selection-start-column="28" selection-end-line="103" selection-end-column="29" />
+        <state relative-caret-position="-105">
+          <caret line="58" column="85" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="85" />
           <folding>
             <marker date="1474600992000" expanded="true" signature="3773:3821" ph="select disti... employee_wage" />
             <marker date="1474600992000" expanded="true" signature="5566:5595" ph="select store... bookstore" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="114" column="82" selection-start-line="114" selection-start-column="82" selection-end-line="114" selection-end-column="82" />
+          <folding>
+            <marker date="1474668467000" expanded="true" signature="2228:2259" ph="select ird_n... employee" />
+            <marker date="1474668467000" expanded="true" signature="3185:3217" ph="select CUSTO... customer" />
+            <marker date="1474668467000" expanded="true" signature="4141:4169" ph="select TITLE... book" />
           </folding>
         </state>
       </provider>

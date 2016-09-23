@@ -44,8 +44,6 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
             for ($i = 1; $i <= $available; $i++) {
                 echo "<option value=" . $i . ">" . $i . "</option>";
             }
-        } else {
-            echo "<option value=" . "Select the book First". ">Select the book First</option>";
         }
     }
 }  else {

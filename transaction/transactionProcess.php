@@ -46,16 +46,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         data: 'selectedBookISBN=' + selectedBookISBN,
                         success: function (html) {
                             $('#stock_available').html(html);
-                            $('#stock_available').click();
+                            var selectedNumOfBook = $('#stock_available').val();
+                            if (selectedNumOfBook) {
+                                $('#addToShoppingList').prop('disabled', false);
+                            }
                         }
                     });
-                }
-            });
-
-            $('#stock_available').on('change', function () {
-                var selectedNumOfBook = $(this).val();
-                if (selectedNumOfBook != "Select the book First") {
-                    $('#addToShoppingList').prop('disabled', false);
+                } else {
+                    $('#stock_available').html("<option value=''>Select the book First</option>")
+                    $('#addToShoppingList').prop('disabled', true);
                 }
             });
         });
@@ -113,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         $stid = oci_parse($conn, $queryString);
                         $result = oci_execute($stid);
                         if ($result) {
-                            echo "<option>Select the book you want to buy:</option>";
+                            echo "<option value=''>Select the book you want to buy</option>";
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                                 echo "<option value='{$row['ISBN']}'>" . $row['TITLE'] . "</option>";
                             }
@@ -125,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             <p>
                 <label>Please select the number of books you want to buy</label>
                 <select id="stock_available" name="stock_available">
-                    <option value="Select the book First">Select the book First</option>
+                    <option value=''>Select the book First</option>
                 </select>
                 <button name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list</button>
             </p>
