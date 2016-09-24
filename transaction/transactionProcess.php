@@ -65,23 +65,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 var selectedBookName = $('#selectedBook option:selected').html()
 
                 if (selectedBookISBN && selectedNum) {
-                    var purchasingItem = selectedBookISBN
-                    var itemInfo = "<tr> <td>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td>" + "<input value=" + selectedNum + ">" + "</td></tr>"
-                    $('#purchasingInfo').append(itemInfo);
+                    var purchasingItem = selectedBookISBN;
+
+                    var itemInfo = "<tr> <td class='rowISBN'>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td class='rowNumber'>" + "<input  value=" + selectedNum + ">" + "</td></tr>"
+
+                    var append = true;
+
+                    $('.rowISBN').each(function () {
+                        if (this.textContent == selectedBookISBN) {
+                            var v = $(this).siblings('.rowNumber').find('input').val()
+                            $(this).siblings('.rowNumber').find('input').val(Number(v) + Number(selectedNum));
+                            append = false;
+                        }
+                    });
+
+                    if (append) {
+                        $('#purchasingInfo').append(itemInfo);
+                    }
                 }
             });
 
-
-            $('#checkout').on('click', function () {
-
-            });
         });
     </script>
     <h2>
         Shopping Simulation:
     </h2>
     <div class="container">
-        <form id="processForm" name="processForm" action="transactionProcess.php">
+        <form id="processForm" name="processForm" action="transactionProcess.php" onsubmit="return false">
             <p>
                 <label>the employee who do the operation</label>
                 <select name="employee" id="employee">
@@ -155,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         <td>Number of Item</td>
                     </tr>
                 </table>
-                <button type="submit" id="checkout" name="checkout">checkout</button>
+                <button type="submit" id="checkout" name="checkout" >checkout</button>
             </div>
         </form>
     </div>
