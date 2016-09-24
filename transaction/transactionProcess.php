@@ -12,6 +12,10 @@ require_once('../Connection.php');
 
 $connection = new Connection();
 
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    print_r($_POST);
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     ?>
     <style type="text/css">
@@ -90,14 +94,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     }
                 }
             });
+
+
         });
     </script>
-
     <h2>
         Shopping Simulation:
     </h2>
+
+
     <div class="container">
-        <form id="processForm" name="processForm" action="transactionProcess.php" onsubmit="return false">
+        <form id="processForm" name="processForm" action="transactionProcess.php" method="post" onsubmit="return true">
             <p>
                 <label>the employee who do the operation</label>
                 <select name="employee" id="employee">
@@ -176,5 +183,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             </div>
         </form>
     </div>
+
     <?php
 }
