@@ -5,20 +5,56 @@
     <title>cosc344 bookstore</title>
 </head>
 <body>
-<h2>
-    <a href="bookstore/insertBookstore.php">Bookstore Operation</a>
-</h2>
-<h2>
-    <a href="employee/insertEmployee.php">Employee Operation</a>
-</h2>
-<h2>
-    <a href="customer/insertCustomer.php">Customer Operation</a>
-</h2>
-<h2>
-    <a href="book/insertBook.php">Book Operation</a>
-</h2>
-<h2>
-    <a href="transaction/transactionProcess.php">Shopping Process Simulation</a>
-</h2>
+
+
+<div>
+    <h1>Summary</h1>
+    <p>We implement the transaction simulation which involve 3 entity:</p>
+    <p>book, customer, employee. It further related to bookstore, transactions and book_tran.</p>
+    <p><strong>All form input related to foreign key, we use selection list to reference this relationship.</strong></p>
+    <p><strong>We also use Ajax and jQuery to improve the operation experience.</strong></p>
+    <p>Because of the limited time, we can display the bookstore, book, employee and customer table. </p>
+    <p>And can only edit bookstore and employee information.<p>
+    <p>The transactions simulation part, we simulated the process of one customer purchase some book and checkout.</p>
+</div>
+<div>
+    <h2>
+        <a href="bookstore/insertBookstore.php">Bookstore Operation</a>
+    </h2>
+    <p>In this bookstore section, we can display the bookstore table, edit each book store by clicking the primary which is a link.</p>
+    <p>After that, we can edit the info and save. We can also create an new bookstore.</p>
+</div>
+<div>
+    <h2>
+        <a href="employee/insertEmployee.php">Employee Operation</a>
+    </h2>
+    <p>In this employee section, we can do similar operation like we did in bookstore section. </p>
+    <p>We can create an new employee, edit one existing employee by click the primary key link.And we can also create a new employee.</p>
+</div>
+
+<div>
+    <h2>
+        <a href="customer/insertCustomer.php">Customer Operation</a>
+    </h2>
+    <p>In this section, we only display the customer table.</p>
+</div>
+<div>
+    <h2>
+        <a href="book/insertBook.php">Book Operation</a>
+    </h2>
+    <p>In this section, we only display the book table.</p>
+</div>
+<div>
+    <h2>
+        <a href="transaction/transactionProcess.php">Shopping Process Simulation</a>
+    </h2>
+    <p>During this simulation process:</p>
+    <p>We must select the employee who is responsible for this purchasing operation.</p>
+    <p>select the customer who is buying the book,</p>
+    <p>select the book item and add them into shopping list,</p>
+    <p>finally, press the checkout button to finish the transaction.</p>
+    <p><strong>Because, we don't use session, so this purchasing process only allow a one customer at one time.</strong></p>
+</div>
+
 </body>
 </html>

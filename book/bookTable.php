@@ -98,17 +98,9 @@ class Book {
         $str = "\n";
         $str .= "<tr>\n";
         $str .= '<td>' . ($this->title !== null ? htmlentities($this->title, ENT_QUOTES) : '&nbsp') . '</td>';
-
-        if ($this->isbn !== null) {
-            $tmp = htmlentities($this->isbn, ENT_QUOTES);
-        } else {
-            $tmp = '&nbsp';
-        }
-        $str .= '<td>' . "<a href=bookForm.php?ird=$tmp>" . $tmp . "</a>" . '</td>';
-        
+        $str .= '<td>' . ($this->isbn !== null ? htmlentities($this->isbn, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->fname !== null ? htmlentities($this->fname, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->middle_init !== null ? htmlentities($this->middle_init, ENT_QUOTES) : '&nbsp') . '</td>';
-        
         $str .= '<td>' . ($this->lname !== null ? htmlentities($this->lname, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->price !== null ? htmlentities($this->price, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->amount_in_stock !== null ? htmlentities($this->amount_in_stock, ENT_QUOTES) : '&nbsp') . '</td>';

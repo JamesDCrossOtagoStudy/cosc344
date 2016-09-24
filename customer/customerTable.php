@@ -84,13 +84,7 @@ class Customer {
         $str .= '<td>' . ($this->street_number !== null ? htmlentities($this->street_number, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->street_name !== null ? htmlentities($this->street_name, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->postcode !== null ? htmlentities($this->postcode, ENT_QUOTES) : '&nbsp') . '</td>';
-
-        if ($this->customer_id !== null) {
-            $tmp = htmlentities($this->customer_id, ENT_QUOTES);
-        } else {
-            $tmp = '&nbsp';
-        }
-        $str .= '<td>' . "<a href=customerForm.php?ird=$tmp>" . $tmp . "</a>" . '</td>';
+        $str .= '<td>' . ($this->customer_id !== null ? htmlentities($this->customer_id, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->fname !== null ? htmlentities($this->fname, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->lname !== null ? htmlentities($this->lname, ENT_QUOTES) : '&nbsp') . '</td>';
         $str .= '<td>' . ($this->phone !== null ? htmlentities($this->phone, ENT_QUOTES) : '&nbsp') . '</td>';

@@ -270,6 +270,7 @@ where b.isbn = bt.bisbn and e.ird_number = t.eird_number and c.customer_id = t.c
         }
         ?>
     </div>
+    <a href="../index.html" id="go_back_home">Go back to home page</a>
     <?php
 } else {
     header('Location: '.$_SERVER['REQUEST_URI']);
