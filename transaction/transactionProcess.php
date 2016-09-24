@@ -34,6 +34,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         select {
             display: table-cell;
         }
+
+        option:nth-child(1) {
+            font-weight: bold;
+        }
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
@@ -71,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     var maxAvailableNumber = $('#numberOfBookSelected option:last-child').val();
 
                     var itemInfo = "<tr> <td class='rowISBN'>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td class='rowNumber'>"
-                        + "<input  value=" + selectedNum + "></td><td>" + maxAvailableNumber + "</td></tr>"
+                        + "<input value=" + selectedNum + "></td><td class='limit'>" + maxAvailableNumber + "</td></tr>"
                     var append = true;
 
                     $('.rowISBN').each(function () {
@@ -96,10 +101,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             // checkout action
             $('#checkout').on('click', function () {
                 var purchasedBook = {};
-
-//                if (!checkoutFormValidation()) {
-//                    return false;
-//                }
 
                 $('.rowISBN').each(function () {
                     var purchasingBookISBN = this.textContent;
@@ -129,7 +130,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 alert('You must select the customer who purchase the book.');
                 return false;
             }
-            return true;
+
+            var inputValueValid = true;
+            $('.rowISBN').each(function () {
+                var numberOfItemInputElement = $(this).siblings('.rowNumber').find('input');
+                var v = numberOfItemInputElement.val();
+
+                var maxLimit = Number($(this).siblings('.limit').html());
+                if (v > maxLimit || v <= 0) {
+                    alert("The number of book cannot > max or <= 0");
+                    inputValueValid = false;
+                    return false;
+                }
+            });
+            return inputValueValid;
         }
     </script>
     <h2>
@@ -257,4 +271,6 @@ where b.isbn = bt.bisbn and e.ird_number = t.eird_number and c.customer_id = t.c
         ?>
     </div>
     <?php
+} else {
+    header('Location: '.$_SERVER['REQUEST_URI']);
 }
