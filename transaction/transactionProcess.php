@@ -66,9 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
                 if (selectedBookISBN && selectedNum) {
                     var purchasingItem = selectedBookISBN
-                    var itemInfo = "<tr> <td>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td>" + selectedNum + "</td></tr>"
+                    var itemInfo = "<tr> <td>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td>" + "<input value=" + selectedNum + ">" + "</td></tr>"
                     $('#purchasingInfo').append(itemInfo);
                 }
+            });
+
+
+            $('#checkout').on('click', function () {
+
             });
         });
     </script>
@@ -150,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         <td>Number of Item</td>
                     </tr>
                 </table>
-                <button type="submit" id="payButton">Pay the bill</button>
+                <button type="submit" id="checkout" name="checkout">checkout</button>
             </div>
         </form>
     </div>

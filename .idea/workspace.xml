@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transaction/transactionProcess.php" afterPath="$PROJECT_DIR$/transaction/transactionProcess.php" />
     </list>
     <ignored path="cosc344.iws" />
@@ -28,12 +27,12 @@
       <file leaf-file-name="transactionProcess.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="150" column="25" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="25" />
+            <state relative-caret-position="326">
+              <caret line="68" column="146" selection-start-line="68" selection-start-column="146" selection-end-line="68" selection-end-column="146" />
               <folding>
-                <marker date="1474675420000" expanded="true" signature="2957:2988" ph="select ird_n... employee" />
-                <marker date="1474675420000" expanded="true" signature="3914:3946" ph="select CUSTO... customer" />
-                <marker date="1474675420000" expanded="true" signature="4870:4898" ph="select TITLE... book" />
+                <marker date="1474679068000" expanded="true" signature="3053:3084" ph="select ird_n... employee" />
+                <marker date="1474679068000" expanded="true" signature="4010:4042" ph="select CUSTO... customer" />
+                <marker date="1474679068000" expanded="true" signature="4966:4994" ph="select TITLE... book" />
               </folding>
             </state>
           </provider>
@@ -42,7 +41,7 @@
       <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajaxData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="191">
               <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
               <folding>
                 <marker date="1474669502000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
@@ -361,7 +360,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101346000" />
+    <option name="totallyTimeSpent" value="102320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="6" />
@@ -729,17 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajaxData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-          <folding>
-            <marker date="1474669502000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
-            <marker date="1474669502000" expanded="true" signature="1160:1218" ph="select AMOUN... book" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/employee/employeeForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
@@ -751,14 +739,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ajaxData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+          <folding>
+            <marker date="1474669502000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+            <marker date="1474669502000" expanded="true" signature="1160:1218" ph="select AMOUN... book" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="150" column="25" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="25" />
+        <state relative-caret-position="326">
+          <caret line="68" column="146" selection-start-line="68" selection-start-column="146" selection-end-line="68" selection-end-column="146" />
           <folding>
-            <marker date="1474675420000" expanded="true" signature="2957:2988" ph="select ird_n... employee" />
-            <marker date="1474675420000" expanded="true" signature="3914:3946" ph="select CUSTO... customer" />
-            <marker date="1474675420000" expanded="true" signature="4870:4898" ph="select TITLE... book" />
+            <marker date="1474679068000" expanded="true" signature="3053:3084" ph="select ird_n... employee" />
+            <marker date="1474679068000" expanded="true" signature="4010:4042" ph="select CUSTO... customer" />
+            <marker date="1474679068000" expanded="true" signature="4966:4994" ph="select TITLE... book" />
           </folding>
         </state>
       </provider>
