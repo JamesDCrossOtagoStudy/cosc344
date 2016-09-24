@@ -45,7 +45,6 @@
 </head>
 <body>
 <?php
-include_once('../Connection.php');
 include_once('bookstoreTable.php');
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $table = new BookstoreTable();

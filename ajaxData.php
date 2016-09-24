@@ -25,6 +25,7 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
         echo '<option value="">No Hourly Rate available</option>';
     }
     oci_free_statement($stid);
+    oci_close($conn);
 
     //generate available book number
 } elseif (isset($_POST['selectedBookISBN']) && !empty($_POST['selectedBookISBN'])) {
@@ -51,6 +52,7 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
         }
     }
     oci_free_statement($stid);
+    oci_close($conn);
 
 } elseif (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
     $customerID = $_POST['customerID'];
@@ -78,18 +80,19 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
         $stid = oci_parse($conn, $insertString);
         $result = oci_execute($stid);
         if ($result) {
-            $stid = oci_parse($conn, 'select AMOUNT_IN_STOCK from book where ISBN=' . $ISBN);
+            $checkCurrentStockString = "select AMOUNT_IN_STOCK from book where ISBN='${key}'";
+            $stid = oci_parse($conn, $checkCurrentStockString);
             $result = oci_execute($stid);
             $numberAvailable = -1;
-            while ($row = oci_fetch_array($this->stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
+            while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                 $numberAvailable = $row['AMOUNT_IN_STOCK'];
             }
             if ($numberAvailable != -1) {
-                $setValue = $numberAvailable - $numberOfBookSold;
-                $updateString = "update book set AMOUNT_IN_STOCK='{$setValue}' WHERE ISBN='{$ISBN}'";
+                $setValue = $numberAvailable - $value;
+                $updateString = "update book set AMOUNT_IN_STOCK='{$setValue}' WHERE ISBN='{$key}'";
                 $stid = oci_parse($conn, $updateString);
 
-                $result = oci_execute($this->stid);
+                $result = oci_execute($stid);
                 if (!$result) {
                     echo "Updating Available number of book failed\n";
                 }
@@ -98,6 +101,7 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
         }
     }
     oci_free_statement($stid);
+    oci_close($conn);
 }
 else {
     echo "<p>Ajax Data Failed!</p>";
