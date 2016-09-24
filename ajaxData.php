@@ -46,8 +46,28 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
             }
         }
     }
-}  else {
-    echo "<p>Failed!</p>";
+} elseif (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
+    $customerID = $_POST['customerID'];
+    $employeeID = $_POST['employeeID'];
+    $purchasedBook = $_POST['purchasedBook'];
+
+    // insert transaction into db:
+    date_default_timezone_set("Pacific/Auckland");
+    $date = date("d-m-Y");
+    $time = date("H:i:s");
+
+    $transaction_number = $date.$time;
+
+    $insertString = "insert into TRANSACTIONS VALUES (TO_DATE('{$date}', 'DD-MM-YYYY'), TO_DATE('{$time}', 'hh24:mi:ss') ,'{$transaction_number}', '${employeeID}', '${customerID}')";
+    echo $insertString;
+
+    $conn = $connection->getConnection();
+    $stid = oci_parse($conn, $insertString);
+    $result = oci_execute($stid);
+
+}
+else {
+    echo "<p>Ajax Data Failed!</p>";
 }
 
 

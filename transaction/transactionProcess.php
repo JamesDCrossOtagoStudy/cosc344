@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            //create book selection list
             $('#selectedBook').on('change', function () {
                 var selectedBookISBN = $(this).val();
                 if (selectedBookISBN) {
@@ -62,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 }
             });
 
+            // create shopping list table
             $('#addToShoppingList').on('click', function () {
                 $('#purchasingItemsContainer').show();
                 var selectedBookISBN = $('#selectedBook').val();
@@ -95,7 +97,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 }
             });
 
+            // checkout action
+            $('#checkout').on('click', function () {
+                var purchasedBook = {};
 
+                $('.rowISBN').each(function () {
+                    var purchasingBookISBN = this.textContent;
+                    purchasedBook[purchasingBookISBN] = $(this).siblings('.rowNumber').find('input').val();
+                });
+
+                var employee = $('#employee').val();
+                var customer = $('#customer').val();
+                
+                $.ajax('../ajaxData', {
+                    type: 'POST',
+                    data: {'employeeID': employee, 'customerID': customer, 'purchasedBook': purchasedBook},
+                    success: function (html) {
+                        $('.container').after(html);
+                    }
+                });
+            });
         });
     </script>
     <h2>
@@ -104,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
     <div class="container">
-        <form id="processForm" name="processForm" action="transactionProcess.php" method="post" onsubmit="return true">
+        <form id="processForm" name="processForm" action="transactionProcess.php" method="post" onsubmit="return false">
             <p>
                 <label>the employee who do the operation</label>
                 <select name="employee" id="employee">
@@ -183,6 +204,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             </div>
         </form>
     </div>
-
     <?php
 }
