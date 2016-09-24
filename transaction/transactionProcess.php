@@ -66,15 +66,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
                 if (selectedBookISBN && selectedNum) {
                     var purchasingItem = selectedBookISBN;
+                    var maxAvailableNumber = $('#numberOfBookSelected option:last-child').val();
 
-                    var itemInfo = "<tr> <td class='rowISBN'>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td class='rowNumber'>" + "<input  value=" + selectedNum + ">" + "</td></tr>"
-
+                    var itemInfo = "<tr> <td class='rowISBN'>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td class='rowNumber'>"
+                        + "<input  value=" + selectedNum + "></td><td>" + maxAvailableNumber + "</td></tr>"
                     var append = true;
 
                     $('.rowISBN').each(function () {
                         if (this.textContent == selectedBookISBN) {
-                            var v = $(this).siblings('.rowNumber').find('input').val()
-                            $(this).siblings('.rowNumber').find('input').val(Number(v) + Number(selectedNum));
+                            var numberOfItemInputElement = $(this).siblings('.rowNumber').find('input');
+                            var v = numberOfItemInputElement.val();
+                            numberOfItemInputElement.val(Number(v) + Number(selectedNum));
+                            if (numberOfItemInputElement.val() > maxAvailableNumber) {
+                                alert("The maxinum number of this book you can buy is: "+maxAvailableNumber);
+                                numberOfItemInputElement.val(maxAvailableNumber);
+                            }
                             append = false;
                         }
                     });
@@ -84,9 +90,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     }
                 }
             });
-
         });
     </script>
+
     <h2>
         Shopping Simulation:
     </h2>
@@ -163,6 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         <td>Book ISBN</td>
                         <td>Book Name</td>
                         <td>Number of Item</td>
+                        <td>Max available num</td>
                     </tr>
                 </table>
                 <button type="submit" id="checkout" name="checkout" >checkout</button>
