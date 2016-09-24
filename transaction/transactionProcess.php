@@ -59,10 +59,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             });
 
             $('#addToShoppingList').on('click', function () {
+                $('#purchasingItemsContainer').show();
                 var selectedBookISBN = $('#selectedBook').val();
                 var selectedNum = $('#numberOfBookSelected').val();
-                if (selectedBookISBN && selectedNum) {
+                var selectedBookName = $('#selectedBook option:selected').html()
 
+                if (selectedBookISBN && selectedNum) {
+                    var purchasingItem = selectedBookISBN
+                    var itemInfo = "<tr> <td>" + selectedBookISBN + "</td> <td>" + selectedBookName + "</td><td>" + selectedNum + "</td></tr>"
+                    $('#purchasingInfo').append(itemInfo);
                 }
             });
         });
@@ -136,6 +141,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 </select>
                 <button type="button" name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list</button>
             </p>
+            <div id="purchasingItemsContainer" hidden>
+                <p>Purchasing Item:</p>
+                <table id="purchasingInfo" border="1">
+                    <tr>
+                        <td>Book ISBN</td>
+                        <td>Book Name</td>
+                        <td>Number of Item</td>
+                    </tr>
+                </table>
+                <button type="submit" id="payButton">Pay the bill</button>
+            </div>
         </form>
     </div>
     <?php
