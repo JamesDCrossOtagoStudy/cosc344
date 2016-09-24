@@ -6,7 +6,7 @@
  * Date: 9/16/16
  * Time: 11:37 AM
  */
-require_once('../Connection.php');
+require ('../Connection.php');
 
 // represent a tuple of record of bookstore table
 
