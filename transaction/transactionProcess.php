@@ -12,10 +12,6 @@ require_once('../Connection.php');
 
 $connection = new Connection();
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    print_r($_POST);
-}
-
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     ?>
     <style type="text/css">
@@ -84,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             var v = numberOfItemInputElement.val();
                             numberOfItemInputElement.val(Number(v) + Number(selectedNum));
                             if (numberOfItemInputElement.val() > maxAvailableNumber) {
-                                alert("The maxinum number of this book you can buy is: "+maxAvailableNumber);
+                                alert("The maxinum number of this book you can buy is: " + maxAvailableNumber);
                                 numberOfItemInputElement.val(maxAvailableNumber);
                             }
                             append = false;
@@ -108,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
                 var employee = $('#employee').val();
                 var customer = $('#customer').val();
-                
+
                 $.ajax('../ajaxData', {
                     type: 'POST',
                     data: {'employeeID': employee, 'customerID': customer, 'purchasedBook': purchasedBook},
@@ -188,7 +184,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <select id="numberOfBookSelected" name="numberOfBookSelected">
                     <option value=''>Select the book First</option>
                 </select>
-                <button type="button" name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list</button>
+                <button type="button" name="addToShoppingList" id="addToShoppingList" disabled>Add to shopping list
+                </button>
             </p>
             <div id="purchasingItemsContainer" hidden>
                 <p>Purchasing Item:</p>
@@ -200,9 +197,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         <td>Max available num</td>
                     </tr>
                 </table>
-                <button type="submit" id="checkout" name="checkout" >checkout</button>
+                <button type="submit" id="checkout" name="checkout">checkout</button>
             </div>
         </form>
+    </div>
+    <div id="transactionContainer">
+        <?php
+
+        if ($connection->testConnection()) {
+            $conn = $connection->getConnection();
+            $queryString = "select transaction_number, ird_number, e.fname as employee_name, customer_id, c.fname as customer_name, isbn, title 
+from employee e, customer c, book b, transactions t, book_tran bt 
+where b.isbn = bt.bisbn and e.ird_number = t.eird_number and c.customer_id = t.ccustomer_id and t.transaction_number = bt.ttransaction_number";
+            $stid = oci_parse($conn, $queryString);
+            $result = oci_execute($stid);
+
+            if ($result) {
+                ?>
+                <table border="">
+                    <tr>
+                        <td>Transaction Number</td>
+                        <td>Employee Number</td>
+                        <td>Employee Fname</td>
+                        <td>Customer ID</td>
+                        <td>Customer Fname</td>
+                        <td>Book ISBN</td>
+                        <td>Book Name</td>
+                    </tr>
+                    <?php
+                    while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS + OCI_ASSOC)) {
+                        print '<tr>';
+                        foreach ($row as $item) {
+                            print '<td>' . ($item !== null ? htmlentities($item, ENT_QUOTES) : '&nbsp') . '</td>';
+                        }
+                        print '</tr>';
+                    }
+                    ?>
+                </table>
+                <?php
+            }
+        }
+        ?>
     </div>
     <?php
 }

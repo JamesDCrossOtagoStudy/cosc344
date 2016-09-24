@@ -29,7 +29,9 @@ class Connection
     }
 
     public function __destruct() {
-        oci_close(self::$conn);
+        if (self::$conn != null) {
+            oci_close(self::$conn);
+        }
     }
 
     public function getConnection() {
