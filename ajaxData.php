@@ -45,10 +45,13 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
         while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
             $available = $row['AMOUNT_IN_STOCK'];
         }
+
         if ($available != 0 || $available != "0" || $available == "") {
             for ($i = 1; $i <= $available; $i++) {
                 echo "<option value=" . $i . ">" . $i . "</option>";
             }
+        } else {
+            echo  "<option value='0' selected disabled>0</option>";
         }
     }
     oci_free_statement($stid);

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17b15fe4-8766-4eda-8f51-d37727e5056a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Connection.php" afterPath="$PROJECT_DIR$/Connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxData.php" afterPath="$PROJECT_DIR$/ajaxData.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transaction/transactionProcess.php" afterPath="$PROJECT_DIR$/transaction/transactionProcess.php" />
     </list>
     <ignored path="cosc344.iws" />
@@ -28,13 +28,13 @@
       <file leaf-file-name="transactionProcess.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+            <state relative-caret-position="-1636">
+              <caret line="66" column="80" selection-start-line="66" selection-start-column="80" selection-end-line="66" selection-end-column="80" />
               <folding>
-                <marker date="1474701205000" expanded="true" signature="4997:5028" ph="select ird_n... employee" />
-                <marker date="1474701205000" expanded="true" signature="5954:5986" ph="select CUSTO... customer" />
-                <marker date="1474701205000" expanded="true" signature="6910:6938" ph="select TITLE... book" />
-                <marker date="1474701205000" expanded="true" signature="8682:9007" ph="select trans... employee" />
+                <marker date="1474712790000" expanded="true" signature="5563:5594" ph="select ird_n... employee" />
+                <marker date="1474712790000" expanded="true" signature="6529:6561" ph="select CUSTO... customer" />
+                <marker date="1474712790000" expanded="true" signature="7494:7522" ph="select TITLE... book" />
+                <marker date="1474712790000" expanded="true" signature="9266:9591" ph="select trans... employee" />
               </folding>
             </state>
           </provider>
@@ -56,37 +56,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajaxData.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ajaxData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="435">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
-                <marker date="1474699557000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
-                <marker date="1474699557000" expanded="true" signature="1220:1278" ph="select AMOUN... book" />
-                <marker date="1474699557000" expanded="true" signature="2280:2322" ph="insert into TRANSACTIONS... " />
-                <marker date="1474699557000" expanded="true" signature="2280:2330" ph="insert into TRANSACTIONS... " />
-                <marker date="1474699557000" expanded="true" signature="2280:2333" ph="insert into TRANSACTIONS... " />
-                <marker date="1474699557000" expanded="true" signature="2280:2382" ph="insert into TRANSACTIONS... " />
-                <marker date="1474699557000" expanded="true" signature="2280:2407" ph="insert into TRANSACTIONS... " />
-                <marker date="1474699557000" expanded="true" signature="2280:2424" ph="insert into TRANSACTIONS... " />
-                <marker date="1474699557000" expanded="true" signature="2280:2439" ph="insert into TRANSACTIONS... " />
-                <marker date="1474699557000" expanded="true" signature="2694:2725" ph="insert into BOOK_TRAN... " />
-                <marker date="1474699557000" expanded="true" signature="2694:2758" ph="insert into BOOK_TRAN... " />
-                <marker date="1474699557000" expanded="true" signature="2911:2955" ph="select AMOUN... book" />
-                <marker date="1474699557000" expanded="true" signature="2911:2963" ph="select AMOUN... book" />
-                <marker date="1474699557000" expanded="true" signature="2911:3028" ph="select AMOUN... book" />
-                <marker date="1474699557000" expanded="true" signature="3393:3458" ph="update book " />
+                <marker date="1474713336000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+                <marker date="1474713336000" expanded="true" signature="1220:1278" ph="select AMOUN... book" />
+                <marker date="1474713336000" expanded="true" signature="2366:2408" ph="insert into TRANSACTIONS... " />
+                <marker date="1474713336000" expanded="true" signature="2366:2416" ph="insert into TRANSACTIONS... " />
+                <marker date="1474713336000" expanded="true" signature="2366:2419" ph="insert into TRANSACTIONS... " />
+                <marker date="1474713336000" expanded="true" signature="2366:2468" ph="insert into TRANSACTIONS... " />
+                <marker date="1474713336000" expanded="true" signature="2366:2493" ph="insert into TRANSACTIONS... " />
+                <marker date="1474713336000" expanded="true" signature="2366:2510" ph="insert into TRANSACTIONS... " />
+                <marker date="1474713336000" expanded="true" signature="2366:2525" ph="insert into TRANSACTIONS... " />
+                <marker date="1474713336000" expanded="true" signature="2780:2811" ph="insert into BOOK_TRAN... " />
+                <marker date="1474713336000" expanded="true" signature="2780:2844" ph="insert into BOOK_TRAN... " />
+                <marker date="1474713336000" expanded="true" signature="2997:3041" ph="select AMOUN... book" />
+                <marker date="1474713336000" expanded="true" signature="2997:3049" ph="select AMOUN... book" />
+                <marker date="1474713336000" expanded="true" signature="2997:3114" ph="select AMOUN... book" />
+                <marker date="1474713336000" expanded="true" signature="3479:3544" ph="update book " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connection.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Connection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="330">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -152,10 +152,10 @@
         <option value="$PROJECT_DIR$/transaction/transactionRecords.php" />
         <option value="$PROJECT_DIR$/bookstore/BookstoreTable.php" />
         <option value="$PROJECT_DIR$/book/bookTable.php" />
-        <option value="$PROJECT_DIR$/ajaxData.php" />
         <option value="$PROJECT_DIR$/bookstore/insertBookstore.php" />
-        <option value="$PROJECT_DIR$/transaction/transactionProcess.php" />
         <option value="$PROJECT_DIR$/Connection.php" />
+        <option value="$PROJECT_DIR$/transaction/transactionProcess.php" />
+        <option value="$PROJECT_DIR$/ajaxData.php" />
       </list>
     </option>
   </component>
@@ -417,7 +417,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121410000" />
+    <option name="totallyTimeSpent" value="123259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="6" />
@@ -779,30 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajaxData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <marker date="1474699557000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
-            <marker date="1474699557000" expanded="true" signature="1220:1278" ph="select AMOUN... book" />
-            <marker date="1474699557000" expanded="true" signature="2280:2322" ph="insert into TRANSACTIONS... " />
-            <marker date="1474699557000" expanded="true" signature="2280:2330" ph="insert into TRANSACTIONS... " />
-            <marker date="1474699557000" expanded="true" signature="2280:2333" ph="insert into TRANSACTIONS... " />
-            <marker date="1474699557000" expanded="true" signature="2280:2382" ph="insert into TRANSACTIONS... " />
-            <marker date="1474699557000" expanded="true" signature="2280:2407" ph="insert into TRANSACTIONS... " />
-            <marker date="1474699557000" expanded="true" signature="2280:2424" ph="insert into TRANSACTIONS... " />
-            <marker date="1474699557000" expanded="true" signature="2280:2439" ph="insert into TRANSACTIONS... " />
-            <marker date="1474699557000" expanded="true" signature="2694:2725" ph="insert into BOOK_TRAN... " />
-            <marker date="1474699557000" expanded="true" signature="2694:2758" ph="insert into BOOK_TRAN... " />
-            <marker date="1474699557000" expanded="true" signature="2911:2955" ph="select AMOUN... book" />
-            <marker date="1474699557000" expanded="true" signature="2911:2963" ph="select AMOUN... book" />
-            <marker date="1474699557000" expanded="true" signature="2911:3028" ph="select AMOUN... book" />
-            <marker date="1474699557000" expanded="true" signature="3393:3458" ph="update book " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookstore/insertBookstore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -825,24 +801,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/transaction/transactionProcess.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="233" column="21" selection-start-line="233" selection-start-column="21" selection-end-line="233" selection-end-column="21" />
+        <state relative-caret-position="-1636">
+          <caret line="66" column="80" selection-start-line="66" selection-start-column="80" selection-end-line="66" selection-end-column="80" />
           <folding>
-            <marker date="1474701205000" expanded="true" signature="4997:5028" ph="select ird_n... employee" />
-            <marker date="1474701205000" expanded="true" signature="5954:5986" ph="select CUSTO... customer" />
-            <marker date="1474701205000" expanded="true" signature="6910:6938" ph="select TITLE... book" />
-            <marker date="1474701205000" expanded="true" signature="8682:9007" ph="select trans... employee" />
+            <marker date="1474712790000" expanded="true" signature="5563:5594" ph="select ird_n... employee" />
+            <marker date="1474712790000" expanded="true" signature="6529:6561" ph="select CUSTO... customer" />
+            <marker date="1474712790000" expanded="true" signature="7494:7522" ph="select TITLE... book" />
+            <marker date="1474712790000" expanded="true" signature="9266:9591" ph="select trans... employee" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Connection.php">
+    <entry file="file://$PROJECT_DIR$/ajaxData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="435">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <marker date="1474713336000" expanded="true" signature="403:470" ph="select disti... employee_wage" />
+            <marker date="1474713336000" expanded="true" signature="1220:1278" ph="select AMOUN... book" />
+            <marker date="1474713336000" expanded="true" signature="2366:2408" ph="insert into TRANSACTIONS... " />
+            <marker date="1474713336000" expanded="true" signature="2366:2416" ph="insert into TRANSACTIONS... " />
+            <marker date="1474713336000" expanded="true" signature="2366:2419" ph="insert into TRANSACTIONS... " />
+            <marker date="1474713336000" expanded="true" signature="2366:2468" ph="insert into TRANSACTIONS... " />
+            <marker date="1474713336000" expanded="true" signature="2366:2493" ph="insert into TRANSACTIONS... " />
+            <marker date="1474713336000" expanded="true" signature="2366:2510" ph="insert into TRANSACTIONS... " />
+            <marker date="1474713336000" expanded="true" signature="2366:2525" ph="insert into TRANSACTIONS... " />
+            <marker date="1474713336000" expanded="true" signature="2780:2811" ph="insert into BOOK_TRAN... " />
+            <marker date="1474713336000" expanded="true" signature="2780:2844" ph="insert into BOOK_TRAN... " />
+            <marker date="1474713336000" expanded="true" signature="2997:3041" ph="select AMOUN... book" />
+            <marker date="1474713336000" expanded="true" signature="2997:3049" ph="select AMOUN... book" />
+            <marker date="1474713336000" expanded="true" signature="2997:3114" ph="select AMOUN... book" />
+            <marker date="1474713336000" expanded="true" signature="3479:3544" ph="update book " />
+          </folding>
         </state>
       </provider>
     </entry>

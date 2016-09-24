@@ -97,6 +97,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $('#checkout').on('click', function () {
                 var purchasedBook = {};
 
+//                if (!checkoutFormValidation()) {
+//                    return false;
+//                }
+
                 $('.rowISBN').each(function () {
                     var purchasingBookISBN = this.textContent;
                     purchasedBook[purchasingBookISBN] = $(this).siblings('.rowNumber').find('input').val();
@@ -115,13 +119,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             });
         });
     </script>
+    <script>
+        function checkoutFormValidation() {
+            if ($('#employee').val() == '') {
+                alert('You must select the employ who do the operation.');
+                return false;
+            }
+            if ($('#customer').val() == '') {
+                alert('You must select the customer who purchase the book.');
+                return false;
+            }
+            return true;
+        }
+    </script>
     <h2>
         Shopping Simulation:
     </h2>
 
 
     <div class="container">
-        <form id="processForm" name="processForm" action="transactionProcess.php" method="post" onsubmit="return false">
+        <form id="processForm" name="processForm" action="transactionProcess.php" method="post" onsubmit="return checkoutFormValidation()">
             <p>
                 <label>the employee who do the operation</label>
                 <select name="employee" id="employee">
@@ -132,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         $stid = oci_parse($conn, $queryString);
                         $result = oci_execute($stid);
                         if ($result) {
-                            echo "<option>Select employee who do the operation:</option>";
+                            echo "<option value=''>Select employee who do the operation:</option>";
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                                 echo "<option value='{$row['IRD_NUMBER']}'>" . $row['IRD_NUMBER'] . "</option>";
                             }
@@ -151,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         $stid = oci_parse($conn, $queryString);
                         $result = oci_execute($stid);
                         if ($result) {
-                            echo "<option>Select customer who do the operation:</option>";
+                            echo "<option value=''>Select customer who do the operation:</option>";
                             while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                                 echo "<option value='{$row['CUSTOMER_ID']}'>" . $row['CUSTOMER_ID'] . "</option>";
                             }
