@@ -8,11 +8,13 @@
  */
 require ('../Connection.php');
 
-// represent a tuple of record of bookstore table
-
 // A class hold the table of bookstore
 class BookstoreTable extends Connection
 {
+    /*
+     * In the class, it hold a array of SingleBookstore, each instance of SingleBookstore represent a row of records in
+     * the bookstore table in db.
+     * */
     private static $bookstores = array();
     private $stid = null;
 
@@ -107,6 +109,9 @@ class BookstoreTable extends Connection
     }
 }
 
+/*
+ * This class represent one row of record of book table in db.
+ * */
 class SingleBookstore extends BookstoreTable
 {
     public $storeID;
@@ -151,30 +156,7 @@ class SingleBookstore extends BookstoreTable
 
         return $str;
     }
-
-    public function containWord($word)
-    {
-        if (strpos($this->address, $word) !== false
-            || strpos($this->city, $word) !== false
-            || $this->city == $word || $this->address == $word
-        ) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public function setNewAddress($address, $storeID) {
-        $updateString = "update bookstore set address = '{$address}'  where storeID = '{$this->storeID}'";
-        $this->stid = oci_parse(self::$conn, $updateString);
-        $result = oci_execute($this->stid);
-        if (!$result) {
-            printf("update failure\n");
-        } else {
-            $this->address = $address;
-        }
-        return $this;
-    }
+    
 
     public function __destruct()
     {

@@ -25,6 +25,7 @@ class BookTable extends Connection {
     private static $table = [];
     private $stid = null;
 
+    // display a table of for book in db: select * from book. Embed the info in a table tag to display
     public function __toString()
     {
         $str = "<table border='1'>\n";
@@ -49,6 +50,7 @@ class BookTable extends Connection {
         return $str;
     }
 
+    // get all books in book: select * from book;
     public function getBookTable() {
         if ($this->testConnection()) {
             $this->stid = oci_parse(self::$conn, 'select * from book');
@@ -83,7 +85,7 @@ PRICE						    NUMBER(5)
 AMOUNT_IN_STOCK				    NUMBER(2)
  */
 
-
+// A class represents a single Book
 class Book {
     public $title = "";
     public $isbn = "";
@@ -93,6 +95,7 @@ class Book {
     public $price = 0;
     public $amount_in_stock = 0;
 
+    // return one book record. Embed the attribute in the td tag.
     public function __toString()
     {
         $str = "\n";

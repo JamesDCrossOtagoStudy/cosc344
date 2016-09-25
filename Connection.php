@@ -1,9 +1,13 @@
 <?php
 
+/*
+ * Connection class which get a connection from oracle
+ * */
 class Connection
 {
     protected static $conn;
     
+    // constructor, when create an instance of Connection. The instance will connect to oracle.
     function __construct()
     {
 //        putenv("ORACLE_SID=".getenv("ORACLE_SID"));
@@ -17,6 +21,7 @@ class Connection
 
     }
 
+    // helper function to test if the connection is whether successful or not
     public function testConnection()
     {
         if (!self::$conn) {
@@ -28,12 +33,14 @@ class Connection
         }
     }
 
+    // when the instance of Connection is destruct, it will release the connection to oracle
     public function __destruct() {
         if (self::$conn != null) {
             oci_close(self::$conn);
         }
     }
 
+    // return an connection
     public function getConnection() {
         return self::$conn;
     }
