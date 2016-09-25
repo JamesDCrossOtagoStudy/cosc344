@@ -38,5 +38,5 @@ if (isset($_POST['selectedBookISBN']) && !empty($_POST['selectedBookISBN'])) {
     oci_close($conn);
 
 } else {
-    echo "<p>Ajax Data Failed!</p>";
+    echo "<p>Ajax Data Failed for getting book with specified ISBN</p>";
 }

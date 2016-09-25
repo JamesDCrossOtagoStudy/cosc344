@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <script>
         function checkoutFormValidation() {
             if ($('#employee').val() == '') {
-                alert('You must select the employ who do the operation.');
+                alert('You must select the employee who do the operation.');
                 return false;
             }
             if ($('#customer').val() == '') {
@@ -238,12 +238,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     </div>
     <div id="transactionContainer">
         <?php
-
         if ($connection->testConnection()) {
             $conn = $connection->getConnection();
-            $queryString = "select transaction_number, ird_number, e.fname as employee_name, customer_id, c.fname as customer_name, isbn, title 
-from employee e, customer c, book b, transactions t, book_tran bt 
-where b.isbn = bt.bisbn and e.ird_number = t.eird_number and c.customer_id = t.ccustomer_id and t.transaction_number = bt.ttransaction_number";
+            $queryString = "select transaction_number, ird_number, e.fname as employee_name, customer_id, " .
+                "c.fname as customer_name, isbn, title from employee e, customer c, book b, transactions t, book_tran bt ".
+                "where b.isbn = bt.bisbn and e.ird_number = t.eird_number and c.customer_id = t.ccustomer_id ".
+                " and t.transaction_number = bt.ttransaction_number";
+
             $stid = oci_parse($conn, $queryString);
             $result = oci_execute($stid);
 
@@ -269,13 +270,13 @@ where b.isbn = bt.bisbn and e.ird_number = t.eird_number and c.customer_id = t.c
                     }
                     ?>
                 </table>
-                <?php
+                    <?php
             }
         }
         ?>
     </div>
     <a href="../index.html" id="go_back_home">Go back to home page</a>
-    <?php
+        <?php
 } else {
     header('Location: ' . $_SERVER['REQUEST_URI']);
 }

@@ -23,8 +23,7 @@ if (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
     $insertString = "";
     // insert transaction first
     $insertString = "insert into TRANSACTIONS VALUES (TO_DATE('{$date}', 'DD-MM-YYYY'), TO_DATE('{$time}', 'hh24:mi:ss') ,'{$transaction_number}', '${employeeID}', '${customerID}')";
-    echo $insertString;
-    echo "<br>";
+
 
     $conn = $connection->getConnection();
     $stid = oci_parse($conn, $insertString);
@@ -32,7 +31,6 @@ if (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
 
     // insert book_tran second
     foreach ($purchasedBook as $key => $value) {
-        echo "key->" . $key . " value->" . $value . "<br>";
         $insertString = "insert into BOOK_TRAN VALUES ('${key}', '${transaction_number}')";
         $stid = oci_parse($conn, $insertString);
         $result = oci_execute($stid);
@@ -61,5 +59,5 @@ if (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
     oci_close($conn);
 }
 else {
-    echo "<p>Ajax Data Failed!</p>";
+    echo "<p>Ajax Data Failed for checkout!</p>";
 }
