@@ -178,19 +178,6 @@ class Employee extends EmployeeTable
         return $str;
     }
 
-    public function getEmployeeWithWord($word)
-    {
-        if (strpos($this->fname, $word) != false
-            || strpos($this->middle_init, $word) != false
-            || strpos($this->lname, $word) != false
-            || $this->fname == $word || $this->middle_init == $word || $this->lname == $word
-        ) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public function __destruct()
     {
         if ($this->stid != null) {

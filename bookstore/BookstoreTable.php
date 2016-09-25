@@ -18,6 +18,9 @@ class BookstoreTable extends Connection
     private static $bookstores = array();
     private $stid = null;
 
+    /*
+     * return a string which can be embed
+     * */
     public function __toString()
     {
         $str = "<table border='1'>\n";
