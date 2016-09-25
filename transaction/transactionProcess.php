@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $('#selectedBook').on('change', function () {
                 var selectedBookISBN = $(this).val();
                 if (selectedBookISBN) {
-                    $.ajax('../ajaxData.php', {
+                    $.ajax('ajaxForSelectingISBN.php', {
                         type: 'POST',
                         data: 'selectedBookISBN=' + selectedBookISBN,
                         success: function (html) {
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 var employee = $('#employee').val();
                 var customer = $('#customer').val();
                 if (checkoutFormValidation()) {
-                    $.ajax('../ajaxData.php', {
+                    $.ajax('ajaxForTransactionRecord.php', {
                         type: 'POST',
                         data: {'employeeID': employee, 'customerID': customer, 'purchasedBook': purchasedBook},
                         success: function (html) {

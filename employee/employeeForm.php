@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $('#weekly_hours').on('change', function () {
             var selectedValue = $(this).val();
             if (selectedValue) {
-                $.ajax('../ajaxData.php', {
+                $.ajax('ajaxForEmployee.php', {
                     type: 'POST',
                     data: 'selected_weekly_hours=' + selectedValue,
                     success: function (html) {

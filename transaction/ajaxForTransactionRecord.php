@@ -2,62 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: zw
- * Date: 9/19/16
- * Time: 11:53 PM
+ * Date: 9/25/16
+ * Time: 5:52 PM
  */
-require_once ('Connection.php');
+require_once ('../Connection.php');
 $connection = new Connection();
 
-// generate data from selection of hourly_rate
-if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hours'])) {
-    // get hourly rate based on selected weekly_hours
-    $conn = $connection->getConnection();
-    $queryString = "select distinct(hourly_rate) from employee_wage where weekly_hours=".$_POST['selected_weekly_hours'];
-    $stid = oci_parse($conn, $queryString);
-
-    $result = oci_execute($stid);
-    if ($result) {
-        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-            $hourly_rate = $row['HOURLY_RATE'];
-           echo "<option value=" . $hourly_rate .">" . $row['HOURLY_RATE'] . "</option>";
-        }
-    } else {
-        echo '<option value="">No Hourly Rate available</option>';
-    }
-    oci_free_statement($stid);
-    oci_close($conn);
-
-    //generate available book number
-} elseif (isset($_POST['selectedBookISBN']) && !empty($_POST['selectedBookISBN'])) {
-    echo "<p>Success!</p>";
-    $conn = $connection->getConnection();
-    $isbn = $_POST['selectedBookISBN'];
-
-    $queryString = "select AMOUNT_IN_STOCK from book where ISBN=" . "'{$isbn}'";
-
-    echo $queryString;
-
-    $stid = oci_parse($conn, $queryString);
-
-    $result = oci_execute($stid);
-    if ($result) {
-        $available = 0;
-        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-            $available = $row['AMOUNT_IN_STOCK'];
-        }
-
-        if ($available != 0 || $available != "0" || $available == "") {
-            for ($i = 1; $i <= $available; $i++) {
-                echo "<option value=" . $i . ">" . $i . "</option>";
-            }
-        } else {
-            echo  "<option value='0' selected disabled>0</option>";
-        }
-    }
-    oci_free_statement($stid);
-    oci_close($conn);
-
-} elseif (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
+if (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
     $customerID = $_POST['customerID'];
     $employeeID = $_POST['employeeID'];
     $purchasedBook = $_POST['purchasedBook'];
@@ -103,7 +54,7 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
                     echo "Updating Available number of book failed\n";
                 }
             }
-            
+
         }
     }
     oci_free_statement($stid);
@@ -112,5 +63,3 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
 else {
     echo "<p>Ajax Data Failed!</p>";
 }
-
-
