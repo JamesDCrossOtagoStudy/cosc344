@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
     <div class="container">
-        <form id="processForm" name="processForm" action="transactionProcess.php" method="post"
+        <form id="processForm" name="processForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post"
               onsubmit="return checkoutFormValidation()">
             <p>
                 <label>the employee who do the operation</label>

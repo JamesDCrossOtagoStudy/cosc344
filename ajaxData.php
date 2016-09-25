@@ -60,7 +60,6 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
 } elseif (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
     $customerID = $_POST['customerID'];
     $employeeID = $_POST['employeeID'];
-    $purchasedBook = [];
     $purchasedBook = $_POST['purchasedBook'];
 
     // insert transaction into db:
