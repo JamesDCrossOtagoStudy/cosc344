@@ -6,9 +6,7 @@
  * Time: 11:09 AM
  */
 require_once('bookstoreTable.php');
-if(!isset($_SESSION['id'])){
-    session_start();
-}
+
 
 $theBookstore = null;
 
@@ -18,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if ((isset($_GET['storeID'])) && !empty($_GET['storeID'])) {
         $id = $_GET['storeID'];
-        $_SESSION['id'] = $id;
 
         if ($id != null) {
             $table = new BookstoreTable();
@@ -56,6 +53,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         select {
             display: table-cell;
+        }
+        #hiddenID {
+            display: none;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -113,6 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             <p>
                 <input type="submit" value="Save" id="submit" name="submit">
             </p>
+            <p>
+                <input type="text" value="<?php echo $storeID; ?>" name="hiddenID" id="hiddenID">
+            </p>
         </form>
     </div>
     <?php
@@ -121,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if ($_POST['submit'] == "Add") {
         $table->insertBookstore($_POST['storeID'], $_POST['city'], $_POST['address'], $_POST['account'], $_POST['date_opened']);
     } elseif ($_POST['submit'] == "Save") {
-        $table->updateBookstoreWithID($_POST['city'], $_POST['address'], $_POST['account'], $_POST['date_opened'], $_SESSION['id']);
+        $table->updateBookstoreWithID($_POST['city'], $_POST['address'], $_POST['account'], $_POST['date_opened'], $_POST['hiddenID']);
     }
 }
 ?>

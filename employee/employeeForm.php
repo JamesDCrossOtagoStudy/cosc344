@@ -6,16 +6,13 @@
  * Time: 4:49 PM
  */
 require_once('employeeTable.php');
-if(!isset($_SESSION['id'])){
-    session_start();
-}
+
 $theEmployee = null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $id = null;
     if (!isset($_GET['addNewEmployee'])) {
         $ird = $_GET['ird'];
-        $_SESSION['id'] = $ird;
 
         if ($ird != null) {
             $table = new EmployeeTable();
@@ -40,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     label { display: table-cell; }
     input { display: table-cell; }
     select{ display: table-cell; }
+    #hiddenID {display: none}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="../js/formValidation.js"></script>
@@ -153,6 +151,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 <p>
                     <input type="submit" value="Save" id="submit" name="submit">
                 </p>
+                <p>
+                    <input type="text" value="<?php echo $ird_number; ?>" id="hiddenID" name="hiddenID">
+                </p>
             </form>
         </div>
         <?php
@@ -160,10 +161,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         $table = new EmployeeTable();
         if ($_POST['submit'] == "Save") {
-            $newEmployee = new Employee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $_SESSION['id']
+            $id = $_POST['hiddenID'];
+
+            $newEmployee = new Employee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $id
                 ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['bookstoreID']);
-            $table->updateEmployee($newEmployee, $_SESSION['id']);
-            session_destroy();
+//            $id = $_SESSION['id'];
+
+            $table->updateEmployee($newEmployee, $id);
         } elseif ($_POST['submit'] == "Add") {
             $table->insertEmployee($_POST['fname'], $_POST['middle_name'], $_POST['lname'], $_POST['ird_number']
                 ,$_POST['contact_number'], $_POST['weekly_hours'], $_POST['hourly_rate'], $_POST['bookstoreID']);
