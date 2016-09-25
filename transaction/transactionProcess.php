@@ -84,7 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                             var numberOfItemInputElement = $(this).siblings('.rowNumber').find('input');
                             var v = numberOfItemInputElement.val();
                             numberOfItemInputElement.val(Number(v) + Number(selectedNum));
-                            if (numberOfItemInputElement.val() > maxAvailableNumber) {
+                            if (Number(numberOfItemInputElement.val()) > Number(maxAvailableNumber)) {
+
                                 alert("The maxinum number of this book you can buy is: " + maxAvailableNumber);
                                 numberOfItemInputElement.val(maxAvailableNumber);
                             }
@@ -107,16 +108,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     purchasedBook[purchasingBookISBN] = $(this).siblings('.rowNumber').find('input').val();
                 });
 
+
                 var employee = $('#employee').val();
                 var customer = $('#customer').val();
-
-                $.ajax('../ajaxData', {
-                    type: 'POST',
-                    data: {'employeeID': employee, 'customerID': customer, 'purchasedBook': purchasedBook},
-                    success: function (html) {
-                        $('.container').after(html);
-                    }
-                });
+                if (checkoutFormValidation()) {
+                    $.ajax('../ajaxData.php', {
+                        type: 'POST',
+                        data: {'employeeID': employee, 'customerID': customer, 'purchasedBook': purchasedBook},
+                        success: function (html) {
+                            $('.container').after(html);
+                        }
+                    });
+                }
             });
         });
     </script>
@@ -152,7 +155,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 
     <div class="container">
-        <form id="processForm" name="processForm" action="transactionProcess.php" method="post" onsubmit="return checkoutFormValidation()">
+        <form id="processForm" name="processForm" action="transactionProcess.php" method="post"
+              onsubmit="return checkoutFormValidation()">
             <p>
                 <label>the employee who do the operation</label>
                 <select name="employee" id="employee">
@@ -273,5 +277,5 @@ where b.isbn = bt.bisbn and e.ird_number = t.eird_number and c.customer_id = t.c
     <a href="../index.html" id="go_back_home">Go back to home page</a>
     <?php
 } else {
-    header('Location: '.$_SERVER['REQUEST_URI']);
+    header('Location: ' . $_SERVER['REQUEST_URI']);
 }

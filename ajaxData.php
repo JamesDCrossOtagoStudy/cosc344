@@ -60,6 +60,7 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
 } elseif (isset($_POST['purchasedBook']) && !empty($_POST['purchasedBook'])) {
     $customerID = $_POST['customerID'];
     $employeeID = $_POST['employeeID'];
+    $purchasedBook = [];
     $purchasedBook = $_POST['purchasedBook'];
 
     // insert transaction into db:
@@ -69,9 +70,11 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
 
     $transaction_number = $date.$time;
 
+    $insertString = "";
     // insert transaction first
     $insertString = "insert into TRANSACTIONS VALUES (TO_DATE('{$date}', 'DD-MM-YYYY'), TO_DATE('{$time}', 'hh24:mi:ss') ,'{$transaction_number}', '${employeeID}', '${customerID}')";
     echo $insertString;
+    echo "<br>";
 
     $conn = $connection->getConnection();
     $stid = oci_parse($conn, $insertString);
@@ -79,6 +82,7 @@ if (isset($_POST['selected_weekly_hours']) && !empty($_POST['selected_weekly_hou
 
     // insert book_tran second
     foreach ($purchasedBook as $key => $value) {
+        echo "key->" . $key . " value->" . $value . "<br>";
         $insertString = "insert into BOOK_TRAN VALUES ('${key}', '${transaction_number}')";
         $stid = oci_parse($conn, $insertString);
         $result = oci_execute($stid);
