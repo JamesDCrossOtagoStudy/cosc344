@@ -32,6 +32,7 @@ class BookstoreTable extends Connection
         return $str;
     }
 
+    // get a book by providing ID
     public function getBookstoreByID($id)
     {
         if ($this->testConnection()) {
@@ -64,12 +65,14 @@ class BookstoreTable extends Connection
         return $someBookStores;
     }
 
+    // get all the books in book table
     public function getAllBookStores()
     {
         if ($this->testConnection()) {
             $this->stid = oci_parse(self::$conn, 'select * from bookstore');
             $r = oci_execute($this->stid);
 
+            self::$bookstores = [];
             while ($row = oci_fetch_array($this->stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
                 $storeID = $row['STOREID'];
                 $city = $row['CITY'];
@@ -83,6 +86,7 @@ class BookstoreTable extends Connection
         }
     }
 
+    // create a new book by proving: $storeID, $city, $address, $account, $data_opened
     public function insertBookstore($storeID, $city, $address, $account, $data_opened) {
         $date = "TO_DATE('{$data_opened}','MM/DD/YYYY')";
         $insertString = "insert into bookstore VALUES ('{$storeID}', '{$city}', '{$address}', '{$account}',  $date, '0')";
@@ -91,6 +95,7 @@ class BookstoreTable extends Connection
         $result = oci_execute($this->stid);
     }
     
+    // update a bookstore by $storeID, with value: $city, $address, $account, $data_opened
     public function updateBookstoreWithID($city, $address, $account, $data_opened, $storeID) {
         $updateString = "update bookstore set CITY='{$city}', address='{$address}', account='{$account}', date_opened='{$data_opened}' where storeID='{$storeID}'";
         echo "update string is: \n $updateString";
@@ -113,7 +118,7 @@ class BookstoreTable extends Connection
 }
 
 /*
- * This class represent one row of record of book table in db.
+ * This class represent one row of records of book table in db.
  * */
 class SingleBookstore extends BookstoreTable
 {

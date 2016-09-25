@@ -14,17 +14,19 @@ $theBookstore = null;
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $id = null;
 
+    // if this page is directed to by click 'storeID'
     if ((isset($_GET['storeID'])) && !empty($_GET['storeID'])) {
         $id = $_GET['storeID'];
 
+        // get bookstore's other attributes, use these attributes as default value to fill the form
         if ($id != null) {
             $table = new BookstoreTable();
             $table->getAllBookStores();
             $theBookstore = $table->getBookstoreByID($id);
         }
-
     }
 
+    // use default value or empty "" to fill the form
     $storeID = $theBookstore == null ? "" : $theBookstore->storeID;
     $city = $theBookstore == null ? "" : $theBookstore->city;
     $address = $theBookstore == null ? "" : $theBookstore->address;
@@ -69,16 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 changeYear: true
             });
 
-//            $('#submit').on('click', function () {
-//                alert("Bookstore ID: "+ $('#storeID').val() + "\n" +
-//                        "City: "+$('#city').val() + "\n" +
-//                        "Address: "+$('#address').val() + "\n" +
-//                        "Account Number: "+$('#account').val() + "\n" +
-//                        "Open date: "+$('#date_opened').val() + "\n" +
-//                        "Total salary: "+$('#total_salary').value+"\n"
-//                );
-//            })
-
         });
     </script>
 <?php
@@ -121,8 +113,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <?php
 } elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $table = new BookstoreTable();
+    // if the button is "Add", then use value in the form to create a new bookstore
     if ($_POST['submit'] == "Add") {
         $table->insertBookstore($_POST['storeID'], $_POST['city'], $_POST['address'], $_POST['account'], $_POST['date_opened']);
+
+        // if the button is "Save", then use value in the form to update current bookstore
     } elseif ($_POST['submit'] == "Save") {
         $table->updateBookstoreWithID($_POST['city'], $_POST['address'], $_POST['account'], $_POST['date_opened'], $_POST['hiddenID']);
     }

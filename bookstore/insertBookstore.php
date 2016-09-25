@@ -46,6 +46,7 @@
 <body>
 <?php
 include_once('bookstoreTable.php');
+// if visit this page, by default, it display all bookstore records
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $table = new BookstoreTable();
     $table->getAllBookStores();
